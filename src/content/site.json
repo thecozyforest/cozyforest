@@ -18,7 +18,7 @@
     "name": "도치쌤",
     "image": "/assets/dochi-profile.webp",
     "imageAlt": "안경 쓴 고슴도치 도치쌤 프로필",
-    "roles": ["국어교사", "연수 강사"],
+    "roles": ["기경민 · 동덕여고 국어교사", "연수 강사"],
     "note": {
       "label": "NOW MAKING",
       "lines": ["지금 만들고 있는 것을", "여기에 한 줄씩 적어요"]
@@ -32,20 +32,26 @@
     {
       "id": "admission",
       "name": "진학·진로 자료",
-      "description": "생기부와 진로 설계를 돕는 자료",
+      "description": "생기부와 진로 설계를 돕는 도구",
       "icon": "school",
       "items": [
         {
-          "name": "진학 자료 이름을 적어 주세요",
-          "description": "어떤 학생에게 어떻게 쓰는 자료인지 한 줄로.",
-          "href": "https://example.com",
+          "name": "생기부 분석기 Pro",
+          "description": "세특·행특을 분석해 강점과 보완점을 짚어 줍니다 · 교사 인증(PIN) 필요",
+          "href": "https://script.google.com/macros/s/AKfycbyBonw8PXGv8HtX_Xwn7tOM2ySPxcz9lqTjCRSu7J1vWESA7KzFdsH51xByVAXOEJlU/exec",
           "icon": "docs"
         },
         {
-          "name": "두 번째 진학 자료",
-          "description": "만든 계기나 쓰임을 적으면 좋습니다.",
-          "href": "https://example.com",
-          "icon": "manual"
+          "name": "숭실대 입학사정관 관점 생기부 평가기",
+          "description": "학생부종합전형 기준으로 평가 포인트와 보완 방향을 제시 · 교사 인증 필요",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/Soongsil_University_Admission_Reader_AIShield/",
+          "icon": "school"
+        },
+        {
+          "name": "도치의 창고 — 전체 도구 보기",
+          "description": "대입·진로, 생기부, 학력평가, 학급운영 도구를 모아 둔 곳",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/",
+          "icon": "code"
         }
       ]
     },
@@ -94,9 +100,9 @@
       "icon": "docs",
       "items": [
         {
-          "name": "수업 자료 이름을 적어 주세요",
-          "description": "어떤 수업에서 어떻게 쓰는지 한 줄로.",
-          "href": "https://example.com",
+          "name": "국어 오답 유형 기록기",
+          "description": "수능 국어 모의고사 오답을 유형별로 자동 분류 · 2027·2028 수능 국어 전용",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/Korean_Error_Pattern_Tracker/",
           "icon": "docs"
         }
       ]
