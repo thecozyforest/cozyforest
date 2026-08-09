@@ -90,6 +90,34 @@
           "href": "https://dorms.school/apps/01bd3c8f-e659-478e-9403-b8880b270db6",
           "icon": "manual",
           "badge": "DoRms"
+        },
+        {
+          "name": "전문대학교 전공별 개설 대학 조회·비교",
+          "description": "전공별로 개설 대학을 조회하고 비교합니다",
+          "href": "https://dorms.school/apps/28d70a4b-8fe9-481e-bf42-0967c4a1e0e1",
+          "icon": "school",
+          "badge": "DoRms"
+        },
+        {
+          "name": "고교·대학 교육과정 연계 패널토의 정리",
+          "description": "패널토의 논의 내용을 정리한 자료",
+          "href": "https://dorms.school/resources/p/5bc6f670-e86e-4ae9-a431-c92d046f6786",
+          "icon": "download",
+          "badge": "DoRms"
+        },
+        {
+          "name": "2027 수시지원 상담카드 V9.4",
+          "description": "연세대·서강대 논술 입결까지 연결한 보강본",
+          "href": "https://dorms.school/resources/p/e6ffcfcc-addb-4668-b761-937303b28420",
+          "icon": "download",
+          "badge": "DoRms"
+        },
+        {
+          "name": "알찬 고교생활·활동 설계 가이드",
+          "description": "학생·학부모 배포용 · 고밀도 외부배포 안전판",
+          "href": "https://dorms.school/resources/p/3bf378cc-002c-488c-9a1c-cbdbb99d7d0a",
+          "icon": "download",
+          "badge": "DoRms"
         }
       ]
     },
@@ -119,6 +147,13 @@
           "href": "https://dorms.school/apps/44112597-9393-4a06-86c6-32bf5b22c370",
           "icon": "manual",
           "badge": "DoRms"
+        },
+        {
+          "name": "학생 성장 관찰·기록 교사용 가이드",
+          "description": "관찰과 기록을 설계하는 교사용 가이드 · 보안 주의",
+          "href": "https://dorms.school/resources/p/26b7caaa-aaca-4112-b782-5b7aefd82e00",
+          "icon": "download",
+          "badge": "DoRms"
         }
       ]
     },
@@ -143,7 +178,7 @@
         {
           "name": "고전소설 인터랙티브 웹앱",
           "description": "내용을 바꿔가며 모티프를 익히는 학습 웹앱",
-          "href": "https://dorms.school/apps/28d70a4b-8fe9-481e-bf42-0967c4a1e0e1",
+          "href": "https://dorms.school/apps/3151019b-c910-40ed-9251-5f8f84eb0d0b",
           "icon": "game",
           "badge": "DoRms"
         },
