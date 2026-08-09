@@ -22,8 +22,8 @@
     "image": "/assets/dochi-profile.webp",
     "imageAlt": "안경 쓴 고슴도치 도치쌤 프로필",
     "roles": [
-      "기경민 · 동덕여고 국어교사",
-      "연수 강사"
+      "기경민 · 고등학교 국어교사",
+      "학급운영 · 진학지도 · AI 코딩 연수"
     ],
     "note": {
       "label": "이렇게 일합니다",
@@ -36,6 +36,83 @@
   },
   "_안내": "groups의 각 항목이 왼쪽 버튼 하나가 됩니다. items에 계속 추가하면 됩니다. href를 빼면 눌리지 않는 기록(연수 이력 등)이 되고, year를 넣으면 아이콘 자리에 연도가 들어갑니다. badge는 오른쪽에 붙는 작은 표시(DoRms, PIN)입니다.",
   "groups": [
+    {
+      "id": "lecture",
+      "name": "연수·강의",
+      "description": "학급운영 · 진학 · 코딩 연수 기록",
+      "icon": "manual",
+      "items": [
+        {
+          "year": "2026",
+          "name": "쌉P 고등쌤의 만들어볼까요",
+          "description": "교실백점 여름방학 · 왕초보 바이브코딩 · 7.18"
+        },
+        {
+          "year": "2026",
+          "name": "바이브코딩 원격 연수",
+          "description": "○○고등학교 · 7.13, 7.20 · 각 120분"
+        },
+        {
+          "year": "2026",
+          "name": "방배정 마법사 2회차",
+          "description": "관계를 설계하는 따뜻한 방배정 · 5.10"
+        },
+        {
+          "year": "2026",
+          "name": "방배정 마법사",
+          "description": "관계를 설계하는 따뜻한 방배정 · 4.30"
+        },
+        {
+          "year": "2026",
+          "name": "쌉P 여고 담임의 흑막으로 완성하는 학급운영",
+          "description": "교실백점 1학기 · 3.2"
+        },
+        {
+          "year": "2026",
+          "name": "왕초보 고3 담임의 우당탕탕 1년 나기",
+          "description": "교실백점 겨울방학 · 2.4~5"
+        },
+        {
+          "year": "2025",
+          "name": "왕초보 한정, 대입상담 기초 및 생기부 활동 방향 고민하기",
+          "description": "교실백점 2학기 · 12월"
+        },
+        {
+          "year": "2025",
+          "name": "왕초보 고3 담임의 우당탕탕 1년 나기",
+          "description": "교실백점 1학기"
+        }
+      ]
+    },
+    {
+      "id": "classroom",
+      "name": "학급 운영",
+      "description": "관계는 따뜻하게, 운영은 정교하게",
+      "icon": "game",
+      "items": [
+        {
+          "name": "지구 한 바퀴",
+          "description": "학생 스터디플랜을 원격으로 관리합니다",
+          "href": "https://dorms.school/apps/8a86cee1-b8e1-4108-af58-9b0fd2052613",
+          "icon": "game",
+          "badge": "DoRms"
+        },
+        {
+          "name": "밑줄서랍",
+          "description": "독서·영화·드라마 속 한 마디를 저장하고 나눕니다",
+          "href": "https://dorms.school/apps/e22b9d7f-f18c-4177-a06e-e215d23d8c54",
+          "icon": "magazine",
+          "badge": "DoRms"
+        },
+        {
+          "name": "오늘의 한 마디",
+          "description": "매일 한 문장으로 학생과 생각을 나눕니다",
+          "href": "https://dorms.school/apps/41618423-cce3-4bbb-bd85-783217a4964c",
+          "icon": "contact",
+          "badge": "DoRms"
+        }
+      ]
+    },
     {
       "id": "admission",
       "name": "진학·입시",
@@ -195,83 +272,6 @@
           "href": "https://dorms.school/apps/53f9e85e-3b95-4c40-afe6-0c1348428c6e",
           "icon": "manual",
           "badge": "DoRms"
-        }
-      ]
-    },
-    {
-      "id": "classroom",
-      "name": "학급 운영",
-      "description": "교실에서 학생과 함께 쓰는 앱",
-      "icon": "game",
-      "items": [
-        {
-          "name": "지구 한 바퀴",
-          "description": "학생 스터디플랜을 원격으로 관리합니다",
-          "href": "https://dorms.school/apps/8a86cee1-b8e1-4108-af58-9b0fd2052613",
-          "icon": "game",
-          "badge": "DoRms"
-        },
-        {
-          "name": "밑줄서랍",
-          "description": "독서·영화·드라마 속 한 마디를 저장하고 나눕니다",
-          "href": "https://dorms.school/apps/e22b9d7f-f18c-4177-a06e-e215d23d8c54",
-          "icon": "magazine",
-          "badge": "DoRms"
-        },
-        {
-          "name": "오늘의 한 마디",
-          "description": "매일 한 문장으로 학생과 생각을 나눕니다",
-          "href": "https://dorms.school/apps/41618423-cce3-4bbb-bd85-783217a4964c",
-          "icon": "contact",
-          "badge": "DoRms"
-        }
-      ]
-    },
-    {
-      "id": "lecture",
-      "name": "연수·강의",
-      "description": "선생님들과 나눈 연수 기록",
-      "icon": "manual",
-      "items": [
-        {
-          "year": "2026",
-          "name": "쌉P 고등쌤의 만들어볼까요",
-          "description": "교실백점 여름방학 · 왕초보 바이브코딩 · 7.18"
-        },
-        {
-          "year": "2026",
-          "name": "바이브코딩 원격 연수",
-          "description": "○○고등학교 · 7.13, 7.20 · 각 120분"
-        },
-        {
-          "year": "2026",
-          "name": "방배정 마법사 2회차",
-          "description": "관계를 설계하는 따뜻한 방배정 · 5.10"
-        },
-        {
-          "year": "2026",
-          "name": "방배정 마법사",
-          "description": "관계를 설계하는 따뜻한 방배정 · 4.30"
-        },
-        {
-          "year": "2026",
-          "name": "쌉P 여고 담임의 흑막으로 완성하는 학급운영",
-          "description": "교실백점 1학기 · 3.2"
-        },
-        {
-          "year": "2026",
-          "name": "왕초보 고3 담임의 우당탕탕 1년 나기",
-          "description": "교실백점 겨울방학 · 2.4~5"
-        },
-        {
-          "year": "2025",
-          "name": "왕초보 한정, 대입상담 기초 및 생기부 활동 방향 고민하기",
-          "description": "교실백점 2학기 · 12월"
-        },
-        {
-          "year": "2025",
-          "name": "왕초보 고3 담임의 우당탕탕 1년 나기",
-          "description": "교실백점 1학기"
         }
       ]
     },
