@@ -560,6 +560,19 @@ nextjs-portal,
   opacity: 0.85;
 }
 
+/* 어디서 열리는지 알려 주는 표시 (DoRms, PIN 등) */
+.cf-badge {
+  flex: none;
+  padding: 0.24rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--cocoa);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  opacity: 0.8;
+}
+
 /* 복사 배지 */
 .cf-copy-badge {
   flex: none;

@@ -15,6 +15,8 @@ export type LinkItem = {
   year?: string;
   /** 값이 있으면 클릭 시 이동 대신 이 문자열을 복사합니다. */
   copy?: string;
+  /** 항목 오른쪽에 붙는 작은 표시. 예: "DoRms", "PIN" */
+  badge?: string;
 };
 
 export type Group = {

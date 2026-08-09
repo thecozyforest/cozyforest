@@ -5,29 +5,36 @@
     "description": "국어교사이자 연수 강사인 도치쌤의 작업실입니다. 진학 자료, 연수 기록, 수업 자료를 한자리에 모아 둡니다.",
     "ogImage": "/assets/og-cover.webp"
   },
-
   "hero": {
     "title": "도치쌤의\n아늑한 숲",
-    "lines": ["왕초보도 문턱 없이 들어오는 자리를 만듭니다."],
+    "lines": [
+      "왕초보도 문턱 없이 들어오는 자리를 만듭니다."
+    ],
     "image": "/assets/hero-desk.webp",
     "imageAlt": "밤의 서재에서 책을 펼치고 기록하는 고슴도치 도치쌤",
-    "cta": { "label": "작업실 둘러보기", "target": "shelf" }
+    "cta": {
+      "label": "작업실 둘러보기",
+      "target": "shelf"
+    }
   },
-
   "profile": {
     "name": "도치쌤",
     "image": "/assets/dochi-profile.webp",
     "imageAlt": "안경 쓴 고슴도치 도치쌤 프로필",
-    "roles": ["기경민 · 동덕여고 국어교사", "연수 강사"],
+    "roles": [
+      "기경민 · 동덕여고 국어교사",
+      "연수 강사"
+    ],
     "note": {
       "label": "NOW MAKING",
-      "lines": ["지금 만들고 있는 것을", "여기에 한 줄씩 적어요"]
+      "lines": [
+        "지금 만들고 있는 것을",
+        "여기에 한 줄씩 적어요"
+      ]
     },
     "tags": []
   },
-
-  "_안내": "groups의 각 항목이 왼쪽 버튼 하나가 됩니다. items에 링크를 계속 추가하면 됩니다. kind가 'timeline'이면 링크 없이 연도(year)와 설명만 나옵니다.",
-
+  "_안내": "groups의 각 항목이 왼쪽 버튼 하나가 됩니다. items에 계속 추가하면 됩니다. href를 빼면 눌리지 않는 기록(연수 이력 등)이 되고, year를 넣으면 아이콘 자리에 연도가 들어갑니다. badge는 오른쪽에 붙는 작은 표시(DoRms, PIN)입니다.",
   "groups": [
     {
       "id": "admission",
@@ -39,13 +46,15 @@
           "name": "생기부 분석기 Pro",
           "description": "세특·행특을 분석해 강점과 보완점을 짚어 줍니다 · 교사 인증(PIN) 필요",
           "href": "https://script.google.com/macros/s/AKfycbyBonw8PXGv8HtX_Xwn7tOM2ySPxcz9lqTjCRSu7J1vWESA7KzFdsH51xByVAXOEJlU/exec",
-          "icon": "docs"
+          "icon": "docs",
+          "badge": "PIN"
         },
         {
           "name": "숭실대 입학사정관 관점 생기부 평가기",
           "description": "학생부종합전형 기준으로 평가 포인트와 보완 방향을 제시 · 교사 인증 필요",
           "href": "https://thecozyforest.github.io/dochis-warehouse/Soongsil_University_Admission_Reader_AIShield/",
-          "icon": "school"
+          "icon": "school",
+          "badge": "PIN"
         }
       ]
     },
@@ -111,7 +120,8 @@
           "name": "도치쌤의 DoRms 채널",
           "description": "생기부·진학 자료와 수업 앱을 나누는 곳 · 교사 인증 후 열람",
           "href": "https://dorms.school/channels/1c9ff07b-ef12-47e7-9ddf-9c2e15633cec",
-          "icon": "privacy"
+          "icon": "privacy",
+          "badge": "DoRms"
         }
       ]
     },
@@ -151,7 +161,6 @@
       ]
     }
   ],
-
   "footer": {
     "line": "숲에 들르신 걸 환영합니다.",
     "credit": "made by 도치쌤"

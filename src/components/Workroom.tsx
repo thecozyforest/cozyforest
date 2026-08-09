@@ -134,6 +134,7 @@ function LinkRow({
           <strong>{item.name}</strong>
           {item.description ? <small>{isCopied ? "복사했습니다" : item.description}</small> : null}
         </span>
+        {item.badge ? <span className="cf-badge">{item.badge}</span> : null}
         {item.copy ? (
           <span className={`cf-copy-badge${isCopied ? " cf-copy-badge-on" : ""}`}>
             {isCopied ? "복사됨" : "복사"}
