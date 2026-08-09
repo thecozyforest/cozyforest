@@ -97,6 +97,12 @@
           "icon": "game"
         },
         {
+          "name": "방배치 설문 폼 — 사본 만들기",
+          "description": "누르면 내 구글 드라이브에 설문 폼이 복제됩니다 · 문항을 만들 필요가 없습니다",
+          "href": "https://docs.google.com/forms/d/1A11WZJke1HFFBz2bCbkfO10uOCMSjfGcZMU3mNoR8mY/copy",
+          "icon": "download"
+        },
+        {
           "name": "지구 한 바퀴",
           "description": "학생 스터디플랜을 원격으로 관리합니다",
           "href": "https://dorms.school/apps/8a86cee1-b8e1-4108-af58-9b0fd2052613",
