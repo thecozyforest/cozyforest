@@ -120,6 +120,13 @@
       "icon": "school",
       "items": [
         {
+          "name": "생기부 분석기 Pro",
+          "description": "세특·행특 분석 · 실행 링크는 교사 인증 진학방에서 배포",
+          "href": "https://dorms.school/apps/85d1481d-3e11-47f9-ac10-b9251c730b35",
+          "icon": "docs",
+          "badge": "DoRms"
+        },
+        {
           "name": "2027·2028 권장과목 검색 및 활동 추천기",
           "description": "권장과목을 찾고 이어질 탐구 활동까지 함께 고민합니다",
           "href": "https://dorms.school/apps/55d6b002-dd34-46cd-b011-c98e18283ff1",
