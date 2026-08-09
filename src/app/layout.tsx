@@ -2,7 +2,8 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { site } from "@/lib/content";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+// 커스텀 도메인을 붙이면 이 주소만 바꾸면 됩니다.
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cozyforest.vercel.app";
 const title = `${site.meta.siteName} · ${site.meta.tagline}`;
 
 export const metadata: Metadata = {
