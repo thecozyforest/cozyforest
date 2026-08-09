@@ -91,6 +91,12 @@
       "icon": "game",
       "items": [
         {
+          "name": "방배치 마법사",
+          "description": "구글 폼 응답을 붙여넣으면 관계와 취향까지 고려해 숙박실을 배정합니다",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/room_wizard/",
+          "icon": "game"
+        },
+        {
           "name": "지구 한 바퀴",
           "description": "학생 스터디플랜을 원격으로 관리합니다",
           "href": "https://dorms.school/apps/8a86cee1-b8e1-4108-af58-9b0fd2052613",
