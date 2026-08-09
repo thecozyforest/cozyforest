@@ -62,7 +62,7 @@ function ProfileBand() {
       </div>
 
       <div className="cf-note">
-        <span className="cf-note-label">{profile.note.label}</span>
+        {profile.note.label ? <span className="cf-note-label">{profile.note.label}</span> : null}
         <p>
           {profile.note.lines.map((line) => (
             <span key={line}>{line}</span>
