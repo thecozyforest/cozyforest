@@ -356,13 +356,42 @@
     {
       "id": "writing",
       "name": "글·기록",
-      "description": "쓰고 다듬고 남기는 일",
+      "description": "집필과 기록",
       "icon": "magazine",
       "items": [
         {
+          "year": "2026",
+          "name": "창비교육 고등학교 독서와 작문 자습서",
+          "description": "창비교육 · 2022 개정 교육과정 · 공저",
+          "href": "https://aladin.kr/p/3CuY5",
+          "icon": "magazine"
+        },
+        {
+          "year": "2025",
           "name": "전세사기 탈출 NO.1",
-          "description": "다온 지음 · 작가와 · 2025.2 · 스토리에디터 도치",
+          "description": "다온 지음 · 작가와 · 스토리에디터 도치",
           "href": "https://m.yes24.com/goods/detail/142686330",
+          "icon": "magazine"
+        },
+        {
+          "year": "2022",
+          "name": "국어 오답의 모든 것 : 문학편",
+          "description": "꿈구두 · 공저",
+          "href": "https://aladin.kr/p/pQaFU",
+          "icon": "magazine"
+        },
+        {
+          "year": "2021",
+          "name": "고전 시가 몽땅 벗기기",
+          "description": "이투스북 · 공저 · 절판",
+          "href": "https://aladin.kr/p/QyrMu",
+          "icon": "magazine"
+        },
+        {
+          "year": "2016",
+          "name": "이기출 국어 문법",
+          "description": "이투스북 · 수능 기출문제집 · 공저 · 절판",
+          "href": "https://aladin.kr/p/MJNKD",
           "icon": "magazine"
         },
         {
