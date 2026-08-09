@@ -44,10 +44,9 @@
       "items": [
         {
           "name": "생기부 분석기 Pro",
-          "description": "세특·행특을 분석해 강점과 보완점을 짚어 줍니다 · 교사 인증(PIN) 필요",
-          "href": "https://script.google.com/macros/s/AKfycbyBonw8PXGv8HtX_Xwn7tOM2ySPxcz9lqTjCRSu7J1vWESA7KzFdsH51xByVAXOEJlU/exec",
-          "icon": "docs",
-          "badge": "PIN"
+          "description": "세특·행특을 분석해 강점과 보완점을 짚어 줍니다 · 사용 안내와 링크는 DoRms에서",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/record-analyzer-guide/",
+          "icon": "docs"
         },
         {
           "name": "숭실대 입학사정관 관점 생기부 평가기",
