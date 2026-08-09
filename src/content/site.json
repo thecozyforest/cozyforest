@@ -38,22 +38,157 @@
   "groups": [
     {
       "id": "admission",
-      "name": "진학·진로 자료",
-      "description": "생기부와 진로 설계를 돕는 도구",
+      "name": "진학·입시",
+      "description": "대입 상담과 진학 지도에 쓰는 도구",
       "icon": "school",
       "items": [
         {
+          "name": "2027·2028 권장과목 검색 및 활동 추천기",
+          "description": "권장과목을 찾고 이어질 탐구 활동까지 함께 고민합니다",
+          "href": "https://dorms.school/apps/55d6b002-dd34-46cd-b011-c98e18283ff1",
+          "icon": "school",
+          "badge": "DoRms"
+        },
+        {
+          "name": "수시 입결 뷰어",
+          "description": "대학 어디가 2023~2026 입결을 비교·검색합니다",
+          "href": "https://dorms.school/apps/89d48080-ad56-49f2-bdaa-2b5b8af8205d",
+          "icon": "docs",
+          "badge": "DoRms"
+        },
+        {
+          "name": "학생 선택과목 상담기",
+          "description": "학교 편제표를 반영한 선택과목 상담 도구",
+          "href": "https://dorms.school/apps/cc3cc7ab-82d0-4b26-8842-3a6b8dc0d792",
+          "icon": "school",
+          "badge": "DoRms"
+        },
+        {
+          "name": "생기부 기반 면접 질문 생성기",
+          "description": "2026 대입 · 대학별 후기 기반 맞춤 면접 질문",
+          "href": "https://dorms.school/apps/15d58be8-7082-4da7-a997-e5fd638f10d8",
+          "icon": "contact",
+          "badge": "DoRms"
+        },
+        {
+          "name": "수시지원 상담카드 수합앱",
+          "description": "학생 상담카드를 실시간으로 수합하고 변경합니다",
+          "href": "https://dorms.school/apps/d851406e-d292-434c-bb25-7109922541d1",
+          "icon": "docs",
+          "badge": "DoRms"
+        },
+        {
+          "name": "2027 진협 입사관 초청 행사 정리본",
+          "description": "서울·경기 진학협의회 주최 행사 내용 정리 뷰어",
+          "href": "https://dorms.school/apps/361b1f16-ee81-48df-bd8b-5208786c56c8",
+          "icon": "magazine",
+          "badge": "DoRms"
+        },
+        {
+          "name": "2028학년도 시행계획 기준 고2 담임 참고 자료",
+          "description": "바뀐 시행계획에 맞춘 담임용 참고 자료",
+          "href": "https://dorms.school/apps/01bd3c8f-e659-478e-9403-b8880b270db6",
+          "icon": "manual",
+          "badge": "DoRms"
+        }
+      ]
+    },
+    {
+      "id": "record",
+      "name": "생기부·기록",
+      "description": "생기부를 분석하고 기록을 설계하는 도구",
+      "icon": "docs",
+      "items": [
+        {
+          "name": "숭실대 입학사정관 시점 생기부 평가기",
+          "description": "학생부종합전형 기준의 평가 포인트와 보완 방향",
+          "href": "https://dorms.school/apps/44cae67a-13a1-4566-94e8-d8eb6d0f2edd",
+          "icon": "school",
+          "badge": "DoRms"
+        },
+        {
           "name": "생기부 분석기 Pro",
-          "description": "세특·행특을 분석해 강점과 보완점을 짚어 줍니다 · 사용 안내와 링크는 DoRms에서",
-          "href": "https://thecozyforest.github.io/dochis-warehouse/record-analyzer-guide/",
+          "description": "세특·행특 분석 · 실행 링크는 교사 인증 진학방에서 배포",
+          "href": "https://dorms.school/apps/85d1481d-3e11-47f9-ac10-b9251c730b35",
+          "icon": "docs",
+          "badge": "DoRms"
+        },
+        {
+          "name": "창체활동 탐구기록지",
+          "description": "자율·진로 창체 활동을 기획하고 정리합니다",
+          "href": "https://dorms.school/apps/44112597-9393-4a06-86c6-32bf5b22c370",
+          "icon": "manual",
+          "badge": "DoRms"
+        }
+      ]
+    },
+    {
+      "id": "class",
+      "name": "수업 자료",
+      "description": "국어 수업과 평가에 바로 쓰는 자료",
+      "icon": "magazine",
+      "items": [
+        {
+          "name": "말랑문법연구소",
+          "description": "품사와 문장성분을 눈에 보이게 · 화법과 언어 수업 전에",
+          "href": "https://thecozyforest.github.io/population/korean-grammar-lab/",
+          "icon": "school"
+        },
+        {
+          "name": "국어 오답 유형 기록기",
+          "description": "수능 국어 오답을 유형별로 자동 분류 · 2027·2028 전용",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/Korean_Error_Pattern_Tracker/",
           "icon": "docs"
         },
         {
-          "name": "숭실대 입학사정관 관점 생기부 평가기",
-          "description": "학생부종합전형 기준으로 평가 포인트와 보완 방향을 제시 · 교사 인증 필요",
-          "href": "https://thecozyforest.github.io/dochis-warehouse/Soongsil_University_Admission_Reader_AIShield/",
-          "icon": "school",
-          "badge": "PIN"
+          "name": "고전소설 인터랙티브 웹앱",
+          "description": "내용을 바꿔가며 모티프를 익히는 학습 웹앱",
+          "href": "https://dorms.school/apps/28d70a4b-8fe9-481e-bf42-0967c4a1e0e1",
+          "icon": "game",
+          "badge": "DoRms"
+        },
+        {
+          "name": "독서캠핑 앱 '납작로그'",
+          "description": "학교 독서캠핑 지정도서에 맞춰 만든 올인원 앱",
+          "href": "https://dorms.school/apps/46f54a66-ddd1-455a-a9e3-b6a8f12502a5",
+          "icon": "magazine",
+          "badge": "DoRms"
+        },
+        {
+          "name": "수행평가 설계 및 루브릭 생성 도우미",
+          "description": "2022 교육과정 기준 · 평가계획서 작성을 돕습니다",
+          "href": "https://dorms.school/apps/53f9e85e-3b95-4c40-afe6-0c1348428c6e",
+          "icon": "manual",
+          "badge": "DoRms"
+        }
+      ]
+    },
+    {
+      "id": "classroom",
+      "name": "학급 운영",
+      "description": "교실에서 학생과 함께 쓰는 앱",
+      "icon": "game",
+      "items": [
+        {
+          "name": "지구 한 바퀴",
+          "description": "학생 스터디플랜을 원격으로 관리합니다",
+          "href": "https://dorms.school/apps/8a86cee1-b8e1-4108-af58-9b0fd2052613",
+          "icon": "game",
+          "badge": "DoRms"
+        },
+        {
+          "name": "밑줄서랍",
+          "description": "독서·영화·드라마 속 한 마디를 저장하고 나눕니다",
+          "href": "https://dorms.school/apps/e22b9d7f-f18c-4177-a06e-e215d23d8c54",
+          "icon": "magazine",
+          "badge": "DoRms"
+        },
+        {
+          "name": "오늘의 한 마디",
+          "description": "매일 한 문장으로 학생과 생각을 나눕니다",
+          "href": "https://dorms.school/apps/41618423-cce3-4bbb-bd85-783217a4964c",
+          "icon": "contact",
+          "badge": "DoRms"
         }
       ]
     },
@@ -96,45 +231,17 @@
       ]
     },
     {
-      "id": "class",
-      "name": "수업 자료",
-      "description": "교실에서 바로 쓰는 국어 수업 자료",
-      "icon": "docs",
-      "items": [
-        {
-          "name": "국어 오답 유형 기록기",
-          "description": "수능 국어 모의고사 오답을 유형별로 자동 분류 · 2027·2028 수능 국어 전용",
-          "href": "https://thecozyforest.github.io/dochis-warehouse/Korean_Error_Pattern_Tracker/",
-          "icon": "docs"
-        }
-      ]
-    },
-    {
       "id": "dorms",
-      "name": "DoRms 커뮤니티 나눔",
-      "description": "교사 인증을 마친 선생님들과 나누는 자료",
+      "name": "DoRms 커뮤니티",
+      "description": "선생님들과 자료를 나누는 채널",
       "icon": "privacy",
       "items": [
         {
           "name": "도치쌤의 DoRms 채널",
-          "description": "생기부·진학 자료와 수업 앱을 나누는 곳 · 교사 인증 후 열람",
+          "description": "여기 없는 자료와 파일까지 모두 · 교사 인증 후 열람",
           "href": "https://dorms.school/channels/1c9ff07b-ef12-47e7-9ddf-9c2e15633cec",
           "icon": "privacy",
           "badge": "DoRms"
-        }
-      ]
-    },
-    {
-      "id": "writing",
-      "name": "글·기록",
-      "description": "꾸준히 쓰고 남기는 곳",
-      "icon": "magazine",
-      "items": [
-        {
-          "name": "보드라운고슴도치의 아늑한 숲",
-          "description": "블로그에 남기는 기록",
-          "href": "https://blog.naver.com/thecozyforest912",
-          "icon": "naver-blog"
         }
       ]
     },

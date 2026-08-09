@@ -646,6 +646,28 @@ nextjs-portal,
   .cf-panel {
     padding: 1.5rem 1.5rem 1.6rem;
   }
+
+  /* 항목이 많은 그룹은 패널 안에서만 스크롤되게 합니다. */
+  .cf-rows {
+    max-height: calc(100svh - 17rem);
+    overflow-y: auto;
+    padding-right: 0.25rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--clay) transparent;
+  }
+
+  .cf-rows::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  .cf-rows::-webkit-scrollbar-thumb {
+    border-radius: 99px;
+    background: rgba(154, 113, 95, 0.55);
+  }
+
+  .cf-rows::-webkit-scrollbar-track {
+    background: transparent;
+  }
 }
 
 /* ── 모션 ──────────────────────────────────── */
