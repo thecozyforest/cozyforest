@@ -381,17 +381,17 @@
           "icon": "magazine"
         },
         {
-          "year": "2021",
-          "name": "고전 시가 몽땅 벗기기",
-          "description": "이투스북 · 공저 · 절판",
-          "href": "https://aladin.kr/p/QyrMu",
-          "icon": "magazine"
-        },
-        {
           "year": "2016",
           "name": "이기출 국어 문법",
           "description": "이투스북 · 수능 기출문제집 · 공저 · 절판",
           "href": "https://aladin.kr/p/MJNKD",
+          "icon": "magazine"
+        },
+        {
+          "year": "2014",
+          "name": "고전 시가 몽땅 벗기기",
+          "description": "이투스북 · 공저 · 2021 개정판 · 절판",
+          "href": "https://aladin.kr/p/QyrMu",
           "icon": "magazine"
         },
         {
