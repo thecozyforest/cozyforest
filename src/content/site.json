@@ -45,7 +45,7 @@
         {
           "year": "2026",
           "name": "쌉P 고등쌤의 만들어볼까요",
-          "description": "교실백점 여름방학 · 왕초보 바이브코딩 · 7.18"
+          "description": "교실백점 · 7.18 · 왕초보 바이브코딩"
         },
         {
           "year": "2026",
@@ -65,22 +65,22 @@
         {
           "year": "2026",
           "name": "쌉P 여고 담임의 흑막으로 완성하는 학급운영",
-          "description": "교실백점 1학기 · 3.2"
+          "description": "교실백점 · 3.2"
         },
         {
           "year": "2026",
           "name": "왕초보 고3 담임의 우당탕탕 1년 나기",
-          "description": "교실백점 겨울방학 · 2.4~5"
+          "description": "교실백점 · 2.4"
         },
         {
           "year": "2025",
           "name": "왕초보 한정, 대입상담 기초 및 생기부 활동 방향 고민하기",
-          "description": "교실백점 2학기 · 12월"
+          "description": "교실백점 · 12.6"
         },
         {
           "year": "2025",
           "name": "왕초보 고3 담임의 우당탕탕 1년 나기",
-          "description": "교실백점 1학기"
+          "description": "교실백점 · 2.20"
         }
       ]
     },
@@ -110,6 +110,22 @@
           "href": "https://dorms.school/apps/41618423-cce3-4bbb-bd85-783217a4964c",
           "icon": "contact",
           "badge": "DoRms"
+        },
+        {
+          "name": "던져두기 — 올인원 비서앱",
+          "description": "일정·기프티콘·아이디어·링크를 한 곳에 던져두는 생각 보관함",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/schedule/",
+          "icon": "docs"
+        },
+        {
+          "name": "학평 애프터 클리닉",
+          "description": "학생 오답 분석 앱과 교사 대시보드 · 학교 운영 중",
+          "icon": "docs"
+        },
+        {
+          "name": "진탐아 스튜디오",
+          "description": "진로 탐색 중 학생의 시선과 관심을 기록 · 학교 운영 중",
+          "icon": "game"
         }
       ]
     },
@@ -215,6 +231,30 @@
           "description": "교사용 진학 설계·관찰 기록과 학생·학부모 활동 설계를 모은 외부배포 묶음",
           "href": "https://thecozyforest.github.io/dochis-warehouse/admissions-guidance-public-suite/",
           "icon": "manual"
+        },
+        {
+          "name": "2027 수능최저 조회기",
+          "description": "성적표를 올리면 수능최저 충족 여부를 자동 계산 · 교과·학종 707개 + 논술 40개",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/csat-checker/",
+          "icon": "docs"
+        },
+        {
+          "name": "8개 대학 학종 교차검증 패키지",
+          "description": "교사용 진학지도 가이드와 학생·학부모 공개용 자료, 교차점검 보고서",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/admissions-guidance-crosschecked-final/",
+          "icon": "manual"
+        },
+        {
+          "name": "진로관제센터",
+          "description": "질문으로 좁혀가며 계열·학과에 맞는 선택과목 조합을 추천 · 담임·진로교사 상담용",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/career-control/",
+          "icon": "school"
+        },
+        {
+          "name": "선택과목으로 보는 진로 나침반",
+          "description": "듣고 있는 과목에서 거꾸로 진로·계열을 탐색 · 진로가 막막한 학생 상담용",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/Student_Career_Compass/",
+          "icon": "school"
         }
       ]
     },
