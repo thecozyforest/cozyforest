@@ -34,8 +34,8 @@
   },
 
   "contacts": [
-    { "label": "Email",     "value": "여기에 메일 주소",   "href": "mailto:hello@example.com" },
-    { "label": "Blog",      "value": "블로그 이름",        "href": "https://example.com" },
+    { "label": "Email",     "value": "jasmint912@gmail.com",   "href": "mailto:hello@example.com" },
+    { "label": "Blog",      "value": "보드라운고슴도치의 아늑한 숲",        "href": "https://blog.naver.com/thecozyforest912" },
     { "label": "Instagram", "value": "@아이디",            "href": "https://instagram.com/" },
     { "label": "강의 문의",  "value": "신청 폼 열기",       "href": "https://example.com" }
   ],
