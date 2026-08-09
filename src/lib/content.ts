@@ -36,7 +36,8 @@ export type Contact = {
 export type SiteContent = {
   meta: { siteName: string; tagline: string; description: string; ogImage: string };
   hero: {
-    eyebrow: string;
+    /** 비워 두면 표시하지 않습니다. */
+    eyebrow?: string;
     title: string;
     lines: string[];
     image: string;

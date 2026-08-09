@@ -1,14 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import {
-  site,
-  iconSrc,
-  isExternal,
-  categoryName,
-  usedCategories,
-  type Work
-} from "@/lib/content";
+import { site, iconSrc, isExternal, usedCategories, type Work } from "@/lib/content";
 
 const ALL = "all";
 
@@ -34,7 +27,7 @@ function Hero() {
         <div className="cf-hero-veil" aria-hidden="true" />
       </div>
       <div className="cf-hero-copy">
-        <span className="cf-eyebrow">{hero.eyebrow}</span>
+        {hero.eyebrow ? <span className="cf-eyebrow">{hero.eyebrow}</span> : null}
         <h1>
           {hero.title.split("\n").map((line) => (
             <span key={line}>{line}</span>
@@ -77,11 +70,13 @@ function ProfileBand() {
             <span key={line}>{line}</span>
           ))}
         </p>
-        <div className="cf-tags">
-          {profile.tags.map((tag) => (
-            <span key={tag}>#{tag}</span>
-          ))}
-        </div>
+        {profile.tags.length > 0 ? (
+          <div className="cf-tags">
+            {profile.tags.map((tag) => (
+              <span key={tag}>#{tag}</span>
+            ))}
+          </div>
+        ) : null}
       </div>
 
       <ul className="cf-contacts">
@@ -118,7 +113,6 @@ function WorkCard({ work }: { work: Work }) {
           <img src={iconSrc(work.icon)} alt="" loading="lazy" />
         </span>
         <span className="cf-card-text">
-          <span className="cf-card-cat">{categoryName(work.category)}</span>
           <strong>{work.name}</strong>
           <small>{work.description}</small>
         </span>
@@ -139,7 +133,6 @@ function Works() {
   return (
     <section className="cf-section" id="works" aria-label="만든 것들">
       <div className="cf-section-head">
-        <span className="cf-eyebrow">WORKS</span>
         <h2>만든 것들</h2>
       </div>
 
@@ -183,7 +176,6 @@ function Timeline() {
   return (
     <section className="cf-section cf-section-timeline" id="timeline" aria-label="활동 이력">
       <div className="cf-section-head">
-        <span className="cf-eyebrow">ACTIVITY</span>
         <h2>걸어온 길</h2>
       </div>
       <ol className="cf-timeline">

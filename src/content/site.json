@@ -7,11 +7,9 @@
   },
 
   "hero": {
-    "eyebrow": "THE COZY FOREST",
     "title": "도치쌤의\n아늑한 숲",
     "lines": [
-      "왕초보도 문턱 없이 들어오는 자리를 만듭니다.",
-      "수업과 연수에서 만든 것들을 여기 모아 둡니다."
+      "왕초보도 문턱 없이 들어오는 자리를 만듭니다."
     ],
     "image": "/assets/hero-desk.webp",
     "imageAlt": "밤의 서재에서 책을 펼치고 기록하는 고슴도치 도치쌤",
@@ -30,7 +28,7 @@
         "여기에 한 줄씩 적어요"
       ]
     },
-    "tags": ["국어수업", "AI활용", "교사연수", "기록", "글쓰기", "왕초보환영"]
+    "tags": []
   },
 
   "contacts": [
@@ -67,8 +65,7 @@
       "name": "연수 제목을 적어 주세요",
       "description": "대상과 다루는 내용을 한 줄로.",
       "href": "https://example.com",
-      "icon": "manual",
-      "image": "/assets/dochi-lecture.webp"
+      "icon": "manual"
     },
     {
       "category": "lecture",
@@ -89,8 +86,7 @@
       "name": "만든 도구 이름",
       "description": "선생님들이 바로 쓸 수 있는 자료나 도구.",
       "href": "https://example.com",
-      "icon": "code",
-      "image": "/assets/dochi-making.webp"
+      "icon": "code"
     },
     {
       "category": "tool",

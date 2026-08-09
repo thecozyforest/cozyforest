@@ -92,12 +92,19 @@ nextjs-portal,
   color: var(--clay);
 }
 
+/* 화살표는 평소엔 숨고 마우스를 올릴 때만 나타납니다. */
 .cf-arrow {
   width: 15px;
   height: 15px;
   flex: none;
-  opacity: 0.5;
+  opacity: 0;
   transition: transform 0.22s ease, opacity 0.22s ease;
+}
+
+@media (hover: none) {
+  .cf-arrow {
+    opacity: 0.35;
+  }
 }
 
 /* ── 히어로 : 밤의 서재 ───────────────────── */
@@ -106,8 +113,8 @@ nextjs-portal,
   position: relative;
   display: flex;
   align-items: flex-end;
-  min-height: min(94svh, 46rem);
-  padding: 6rem 1.5rem 5.5rem;
+  min-height: min(58svh, 28rem);
+  padding: 4rem 1.5rem 3.2rem;
   overflow: hidden;
   isolation: isolate;
 }
@@ -148,7 +155,7 @@ nextjs-portal,
 
 .cf-hero-copy h1 {
   margin: 0;
-  font-size: clamp(2.6rem, 9vw, 4.6rem);
+  font-size: clamp(2.1rem, 6.6vw, 3.4rem);
   font-weight: 800;
   line-height: 1.08;
   letter-spacing: -0.02em;
@@ -221,7 +228,7 @@ nextjs-portal,
   gap: 1.15rem;
   max-width: var(--wrap);
   margin: 0 auto;
-  padding: 3rem 0 1rem;
+  padding: 2.2rem 0 0.5rem;
 }
 
 .cf-profile-id {
@@ -255,13 +262,17 @@ nextjs-portal,
   margin: 0.5rem 0 0;
 }
 
+/* 역할은 알약 없이 글자만. 가운뎃점으로 구분합니다. */
 .cf-roles span {
-  padding: 0.2rem 0.62rem;
-  border-radius: 999px;
-  background: var(--bark);
-  color: var(--cream);
-  font-size: 0.76rem;
+  color: var(--cocoa);
+  font-size: 0.86rem;
   font-weight: 600;
+}
+
+.cf-roles span + span::before {
+  content: "·";
+  margin: 0 0.4rem;
+  opacity: 0.5;
 }
 
 /* 포스트잇 */
@@ -360,16 +371,16 @@ nextjs-portal,
 .cf-section {
   max-width: var(--wrap);
   margin: 0 auto;
-  padding: 2.8rem 0 0;
+  padding: 2.2rem 0 0;
 }
 
 .cf-section-head {
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.9rem;
 }
 
 .cf-section-head h2 {
-  margin: 0.3rem 0 0;
-  font-size: clamp(1.5rem, 5vw, 2rem);
+  margin: 0;
+  font-size: clamp(1.3rem, 4.2vw, 1.6rem);
   font-weight: 800;
   letter-spacing: -0.02em;
 }
@@ -426,7 +437,8 @@ nextjs-portal,
 .cf-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.85rem;
+  align-items: start; /* 그림 있는 카드가 옆 카드까지 늘리지 않도록 */
+  gap: 0.7rem;
 }
 
 .cf-card {
@@ -498,15 +510,6 @@ nextjs-portal,
   min-width: 0;
 }
 
-.cf-card-cat {
-  display: block;
-  margin-bottom: 0.15rem;
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  color: var(--berry);
-}
-
 .cf-card-text strong {
   display: block;
   font-size: 1rem;
@@ -535,7 +538,7 @@ nextjs-portal,
   display: grid;
   grid-template-columns: 3.6rem 1fr;
   gap: 1rem;
-  padding: 1.05rem 0;
+  padding: 0.8rem 0;
   border-top: 1px solid var(--line);
 }
 
@@ -568,7 +571,7 @@ nextjs-portal,
 /* ── 푸터 ──────────────────────────────────── */
 
 .cf-footer {
-  padding: 3rem 1.5rem 3.5rem;
+  padding: 2rem 1.5rem 2.4rem;
   background: var(--cream);
   color: var(--cocoa);
   text-align: center;
@@ -606,8 +609,12 @@ nextjs-portal,
 }
 
 @media (min-width: 60rem) {
+  .cf-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .cf-hero {
-    padding: 7rem 3rem 6.5rem;
+    padding: 5rem 3rem 4rem;
   }
 
   .cf-main {
