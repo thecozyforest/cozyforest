@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="도치쌤">
+  <rect width="64" height="64" rx="16" fill="#241a18"/>
+  <circle cx="32" cy="34" r="21" fill="#3a2723"/>
+  <!-- 가시 -->
+  <path d="M12 36c1-9 6-16 13-19l-1-7 6 5 4-6 3 6 6-4-1 6c7 3 11 10 11 19 0 2-1 4-2 5H14c-1-1-2-3-2-5z" fill="#8c6647"/>
+  <path d="M17 34c1-6 4-11 9-13l-1-4 4 3 3-4 2 4 4-3-1 4c5 2 8 7 9 13z" fill="#a67f56"/>
+  <!-- 얼굴 -->
+  <path d="M24 36c0-5 4-8 9-8s9 3 9 8-4 9-9 9-9-4-9-9z" fill="#e8cfa8"/>
+  <!-- 안경 -->
+  <g fill="none" stroke="#4d3633" stroke-width="1.6">
+    <circle cx="29.5" cy="36" r="3.6"/>
+    <circle cx="38.5" cy="36" r="3.6"/>
+    <path d="M33.1 36h1.8"/>
+  </g>
+  <!-- 코 -->
+  <ellipse cx="34" cy="43" rx="2.6" ry="2" fill="#4d3633"/>
+  <!-- 램프 불빛 -->
+  <circle cx="50" cy="15" r="4" fill="#f2b45c"/>
+</svg>

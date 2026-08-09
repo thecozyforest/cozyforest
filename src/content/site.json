@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "siteName": "도치쌤의 아늑한 숲",
+    "tagline": "가르치고, 만들고, 기록합니다",
+    "description": "국어교사이자 연수 강사인 도치쌤의 작업실입니다. 수업에서 만든 것, 연수에서 나눈 것, 틈틈이 쓴 글을 한자리에 모아 둡니다.",
+    "ogImage": "/assets/og-cover.webp"
+  },
+
+  "hero": {
+    "eyebrow": "THE COZY FOREST",
+    "title": "도치쌤의\n아늑한 숲",
+    "lines": [
+      "왕초보도 문턱 없이 들어오는 자리를 만듭니다.",
+      "수업과 연수에서 만든 것들을 여기 모아 둡니다."
+    ],
+    "image": "/assets/hero-desk.webp",
+    "imageAlt": "밤의 서재에서 책을 펼치고 기록하는 고슴도치 도치쌤",
+    "cta": { "label": "작업실 둘러보기", "target": "works" }
+  },
+
+  "profile": {
+    "name": "도치쌤",
+    "image": "/assets/dochi-profile.webp",
+    "imageAlt": "안경 쓴 고슴도치 도치쌤 프로필",
+    "roles": ["국어교사", "연수 강사"],
+    "note": {
+      "label": "NOW MAKING",
+      "lines": [
+        "지금 만들고 있는 것을",
+        "여기에 한 줄씩 적어요"
+      ]
+    },
+    "tags": ["국어수업", "AI활용", "교사연수", "기록", "글쓰기", "왕초보환영"]
+  },
+
+  "contacts": [
+    { "label": "Email",     "value": "여기에 메일 주소",   "href": "mailto:hello@example.com" },
+    { "label": "Blog",      "value": "블로그 이름",        "href": "https://example.com" },
+    { "label": "Instagram", "value": "@아이디",            "href": "https://instagram.com/" },
+    { "label": "강의 문의",  "value": "신청 폼 열기",       "href": "https://example.com" }
+  ],
+
+  "categories": [
+    { "id": "class",   "name": "수업",      "en": "CLASSROOM" },
+    { "id": "lecture", "name": "연수·강의", "en": "LECTURE" },
+    { "id": "writing", "name": "글·기록",   "en": "WRITING" },
+    { "id": "tool",    "name": "도구·자료", "en": "TOOLKIT" }
+  ],
+
+  "works": [
+    {
+      "category": "class",
+      "name": "수업 자료 이름을 적어 주세요",
+      "description": "어떤 수업에서 어떻게 쓰는 자료인지 한 줄로.",
+      "href": "https://example.com",
+      "icon": "school"
+    },
+    {
+      "category": "class",
+      "name": "두 번째 수업 작업물",
+      "description": "학생들이 무엇을 할 수 있게 되는지 적으면 좋습니다.",
+      "href": "https://example.com",
+      "icon": "docs"
+    },
+    {
+      "category": "lecture",
+      "name": "연수 제목을 적어 주세요",
+      "description": "대상과 다루는 내용을 한 줄로.",
+      "href": "https://example.com",
+      "icon": "manual",
+      "image": "/assets/dochi-lecture.webp"
+    },
+    {
+      "category": "lecture",
+      "name": "강의 신청 안내",
+      "description": "연수 요청을 받는 통로를 연결해 두세요.",
+      "href": "https://example.com",
+      "icon": "contact"
+    },
+    {
+      "category": "writing",
+      "name": "블로그 · 브런치 글",
+      "description": "꾸준히 쓰고 있는 기록의 주소.",
+      "href": "https://example.com",
+      "icon": "magazine"
+    },
+    {
+      "category": "tool",
+      "name": "만든 도구 이름",
+      "description": "선생님들이 바로 쓸 수 있는 자료나 도구.",
+      "href": "https://example.com",
+      "icon": "code",
+      "image": "/assets/dochi-making.webp"
+    },
+    {
+      "category": "tool",
+      "name": "자료 내려받기",
+      "description": "배포하는 파일이 있다면 여기에.",
+      "href": "https://example.com",
+      "icon": "download"
+    }
+  ],
+
+  "timeline": [
+    { "year": "2026", "title": "몽당분필 오픈 연수 · The Core", "description": "클로드 코드 하네스 활용 강의" },
+    { "year": "2026", "title": "활동 제목을 적어 주세요",        "description": "맡은 역할과 한 줄 설명" },
+    { "year": "2025", "title": "활동 제목을 적어 주세요",        "description": "주제 · 참여 방식" },
+    { "year": "2025", "title": "활동 제목을 적어 주세요",        "description": "대상과 활동 내용" },
+    { "year": "2024", "title": "기록하고 싶은 첫 활동",          "description": "한 줄 설명" }
+  ],
+
+  "footer": {
+    "line": "숲에 들르신 걸 환영합니다.",
+    "credit": "made by 도치쌤"
+  }
+}
