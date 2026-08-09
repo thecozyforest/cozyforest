@@ -43,6 +43,12 @@
       "icon": "manual",
       "items": [
         {
+          "name": "출발 프롬프트 틀",
+          "description": "교실의 불편에서 시작해 AI에게 줄 사양까지 만드는 3단계 · 바이브코딩 연수에서 쓰는 틀",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/prompt_starter/",
+          "icon": "code"
+        },
+        {
           "year": "2026",
           "name": "쌉P 고등쌤의 만들어볼까요",
           "description": "교실백점 · 7.18 · 왕초보 바이브코딩"
