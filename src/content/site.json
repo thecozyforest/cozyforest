@@ -127,6 +127,13 @@
           "badge": "DoRms"
         },
         {
+          "name": "숭실대 입학사정관 시점 생기부 평가기",
+          "description": "학생부종합전형 기준의 평가 포인트와 보완 방향",
+          "href": "https://dorms.school/apps/44cae67a-13a1-4566-94e8-d8eb6d0f2edd",
+          "icon": "school",
+          "badge": "DoRms"
+        },
+        {
           "name": "2027·2028 권장과목 검색 및 활동 추천기",
           "description": "권장과목을 찾고 이어질 탐구 활동까지 함께 고민합니다",
           "href": "https://dorms.school/apps/55d6b002-dd34-46cd-b011-c98e18283ff1",
