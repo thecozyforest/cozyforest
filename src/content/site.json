@@ -233,6 +233,12 @@
           "badge": "DoRms"
         },
         {
+          "name": "생기부 분석기 Pro — 사용 설명서",
+          "description": "무엇을 어떻게 분석하는지 보여 주는 공개 설명서",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/record-analyzer-guide/",
+          "icon": "manual"
+        },
+        {
           "name": "창체활동 탐구기록지",
           "description": "자율·진로 창체 활동을 기획하고 정리합니다",
           "href": "https://dorms.school/apps/44112597-9393-4a06-86c6-32bf5b22c370",
