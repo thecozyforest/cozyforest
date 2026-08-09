@@ -209,6 +209,12 @@
           "href": "https://dorms.school/resources/p/3bf378cc-002c-488c-9a1c-cbdbb99d7d0a",
           "icon": "download",
           "badge": "DoRms"
+        },
+        {
+          "name": "학생부종합전형 공개 가이드 모음",
+          "description": "교사용 진학 설계·관찰 기록과 학생·학부모 활동 설계를 모은 외부배포 묶음",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/admissions-guidance-public-suite/",
+          "icon": "manual"
         }
       ]
     },
