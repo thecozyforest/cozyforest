@@ -354,6 +354,26 @@
       ]
     },
     {
+      "id": "writing",
+      "name": "글·기록",
+      "description": "쓰고 다듬고 남기는 일",
+      "icon": "magazine",
+      "items": [
+        {
+          "name": "전세사기 탈출 NO.1",
+          "description": "다온 지음 · 작가와 · 2025.2 · 스토리에디터 참여",
+          "href": "https://m.yes24.com/goods/detail/142686330",
+          "icon": "magazine"
+        },
+        {
+          "name": "보드라운고슴도치의 아늑한 숲",
+          "description": "블로그에 남기는 기록",
+          "href": "https://blog.naver.com/thecozyforest912",
+          "icon": "naver-blog"
+        }
+      ]
+    },
+    {
       "id": "dorms",
       "name": "DoRms 커뮤니티",
       "description": "선생님들과 자료를 나누는 채널",
