@@ -46,12 +46,6 @@
           "description": "학생부종합전형 기준으로 평가 포인트와 보완 방향을 제시 · 교사 인증 필요",
           "href": "https://thecozyforest.github.io/dochis-warehouse/Soongsil_University_Admission_Reader_AIShield/",
           "icon": "school"
-        },
-        {
-          "name": "도치의 창고 — 전체 도구 보기",
-          "description": "대입·진로, 생기부, 학력평가, 학급운영 도구를 모아 둔 곳",
-          "href": "https://thecozyforest.github.io/dochis-warehouse/",
-          "icon": "code"
         }
       ]
     },
@@ -104,6 +98,20 @@
           "description": "수능 국어 모의고사 오답을 유형별로 자동 분류 · 2027·2028 수능 국어 전용",
           "href": "https://thecozyforest.github.io/dochis-warehouse/Korean_Error_Pattern_Tracker/",
           "icon": "docs"
+        }
+      ]
+    },
+    {
+      "id": "dorms",
+      "name": "DoRms 커뮤니티 나눔",
+      "description": "교사 인증을 마친 선생님들과 나누는 자료",
+      "icon": "privacy",
+      "items": [
+        {
+          "name": "도치쌤의 DoRms 채널",
+          "description": "생기부·진학 자료와 수업 앱을 나누는 곳 · 교사 인증 후 열람",
+          "href": "https://dorms.school/channels/1c9ff07b-ef12-47e7-9ddf-9c2e15633cec",
+          "icon": "privacy"
         }
       ]
     },
