@@ -8,10 +8,10 @@ export type IconName =
 export type LinkItem = {
   name: string;
   description?: string;
-  /** 링크 항목이면 필수. timeline 그룹에서는 생략합니다. */
+  /** 없으면 눌리지 않는 기록 항목이 됩니다(연수 이력 등). */
   href?: string;
   icon?: IconName;
-  /** timeline 그룹에서 왼쪽에 표시할 연도 */
+  /** 있으면 아이콘 자리에 연도가 들어갑니다. */
   year?: string;
   /** 값이 있으면 클릭 시 이동 대신 이 문자열을 복사합니다. */
   copy?: string;
@@ -22,8 +22,6 @@ export type Group = {
   name: string;
   description: string;
   icon: IconName;
-  /** "timeline"이면 연도 목록으로 그립니다. 없으면 링크 목록입니다. */
-  kind?: "timeline";
   items: LinkItem[];
 };
 

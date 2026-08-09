@@ -56,16 +56,34 @@
       "icon": "manual",
       "items": [
         {
-          "name": "연수 제목을 적어 주세요",
-          "description": "2026 · 대상과 다루는 내용",
-          "href": "https://example.com",
-          "icon": "manual"
+          "year": "2026",
+          "name": "쌉P 고등쌤의 만들어볼까요",
+          "description": "교실백점 여름방학 · 왕초보 바이브코딩"
         },
         {
-          "name": "강의 문의 · 신청",
-          "description": "연수 요청을 받는 통로를 연결해 두세요.",
-          "href": "https://example.com",
-          "icon": "contact"
+          "year": "2026",
+          "name": "바이브코딩 원격 연수",
+          "description": "○○고등학교 · 2차시 · 회당 120분"
+        },
+        {
+          "year": "2026",
+          "name": "쌉P 여고 담임의 흑막으로 완성하는 학급운영",
+          "description": "교실백점 1학기"
+        },
+        {
+          "year": "2025",
+          "name": "왕초보 고3 담임의 우당탕탕 1년 나기",
+          "description": "교실백점 겨울방학"
+        },
+        {
+          "year": "2025",
+          "name": "왕초보 한정, 대입상담 기초 및 생기부 활동 방향 고민하기",
+          "description": "교실백점 2학기"
+        },
+        {
+          "year": "2025",
+          "name": "왕초보 고3 담임의 우당탕탕 1년 나기",
+          "description": "교실백점 1학기"
         }
       ]
     },
@@ -95,19 +113,6 @@
           "href": "https://blog.naver.com/thecozyforest912",
           "icon": "naver-blog"
         }
-      ]
-    },
-    {
-      "id": "history",
-      "name": "걸어온 길",
-      "description": "연수·강의와 활동 이력",
-      "icon": "privacy",
-      "kind": "timeline",
-      "items": [
-        { "year": "2026", "name": "활동 제목을 적어 주세요", "description": "맡은 역할과 한 줄 설명" },
-        { "year": "2025", "name": "활동 제목을 적어 주세요", "description": "주제 · 참여 방식" },
-        { "year": "2025", "name": "활동 제목을 적어 주세요", "description": "대상과 활동 내용" },
-        { "year": "2024", "name": "기록하고 싶은 첫 활동", "description": "한 줄 설명" }
       ]
     },
     {

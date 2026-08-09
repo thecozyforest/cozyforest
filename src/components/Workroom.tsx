@@ -80,14 +80,22 @@ function ProfileBand() {
   );
 }
 
-/** 연도만 있고 링크는 없는 이력 항목 */
-function TimelineRow({ item }: { item: LinkItem }) {
+/** 링크 없이 기록만 남기는 항목 */
+function StaticRow({ item }: { item: LinkItem }) {
   return (
-    <li className="cf-row cf-row-static">
-      <span className="cf-row-year">{item.year}</span>
-      <span className="cf-row-copy">
-        <strong>{item.name}</strong>
-        {item.description ? <small>{item.description}</small> : null}
+    <li className="cf-row">
+      <span className="cf-row-static">
+        {item.year ? (
+          <span className="cf-row-year">{item.year}</span>
+        ) : item.icon ? (
+          <span className="cf-row-icon" aria-hidden="true">
+            <img src={iconSrc(item.icon)} alt="" loading="lazy" />
+          </span>
+        ) : null}
+        <span className="cf-row-copy">
+          <strong>{item.name}</strong>
+          {item.description ? <small>{item.description}</small> : null}
+        </span>
       </span>
     </li>
   );
@@ -115,7 +123,9 @@ function LinkRow({
           onCopy(item.copy, item.href);
         }}
       >
-        {item.icon ? (
+        {item.year ? (
+          <span className="cf-row-year">{item.year}</span>
+        ) : item.icon ? (
           <span className="cf-row-icon" aria-hidden="true">
             <img src={iconSrc(item.icon)} alt="" loading="lazy" />
           </span>
@@ -158,8 +168,8 @@ function Panel({
       </div>
       <ul className="cf-rows">
         {group.items.map((item, index) =>
-          group.kind === "timeline" ? (
-            <TimelineRow key={`${item.name}-${index}`} item={item} />
+          !item.href ? (
+            <StaticRow key={`${item.name}-${index}`} item={item} />
           ) : (
             <LinkRow
               key={`${item.name}-${index}`}

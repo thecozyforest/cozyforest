@@ -499,6 +499,11 @@ nextjs-portal,
   transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
+/* 링크 없는 기록 항목은 눌리지 않습니다. */
+.cf-row-static {
+  cursor: default;
+}
+
 .cf-row > a:hover {
   border-color: var(--clay);
   background: #fff;
