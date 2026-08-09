@@ -103,6 +103,18 @@
           "icon": "download"
         },
         {
+          "name": "칭찬샤워",
+          "description": "설문 응답을 포스트잇 카드로 만들어 A4에 꽉 차게 인쇄합니다 · 파일은 브라우저 안에서만 처리",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/praise-shower/",
+          "icon": "game"
+        },
+        {
+          "name": "칭찬샤워 설문 폼 — 사본 만들기",
+          "description": "누르면 내 구글 드라이브에 설문 폼이 복제됩니다",
+          "href": "https://docs.google.com/forms/d/1QR2R_80Nm7ZqdHrhwQm3k_YuP_nYmC-662iXmhlnAUc/copy",
+          "icon": "download"
+        },
+        {
           "name": "지구 한 바퀴",
           "description": "학생 스터디플랜을 원격으로 관리합니다",
           "href": "https://dorms.school/apps/8a86cee1-b8e1-4108-af58-9b0fd2052613",
