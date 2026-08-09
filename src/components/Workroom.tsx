@@ -1,9 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { site, iconSrc, isExternal, usedCategories, type Work } from "@/lib/content";
-
-const ALL = "all";
+import { useRef, useState } from "react";
+import { site, iconSrc, isExternal, shownGroups, type Group, type LinkItem } from "@/lib/content";
 
 function Arrow() {
   return (
@@ -14,7 +12,7 @@ function Arrow() {
   );
 }
 
-function outboundProps(href: string) {
+function outboundProps(href?: string) {
   return isExternal(href) ? { target: "_blank", rel: "noopener noreferrer" } : {};
 }
 
@@ -48,7 +46,7 @@ function Hero() {
 }
 
 function ProfileBand() {
-  const { profile, contacts } = site;
+  const { profile } = site;
   return (
     <section className="cf-profile" aria-label="프로필">
       <div className="cf-profile-id">
@@ -78,117 +76,194 @@ function ProfileBand() {
           </div>
         ) : null}
       </div>
-
-      <ul className="cf-contacts">
-        {contacts.map((contact) => (
-          <li key={contact.label}>
-            <a href={contact.href} {...outboundProps(contact.href)}>
-              <span className="cf-contact-label">{contact.label}</span>
-              <span className="cf-contact-value">
-                {contact.value}
-                <Arrow />
-              </span>
-            </a>
-          </li>
-        ))}
-      </ul>
     </section>
   );
 }
 
-function WorkCard({ work }: { work: Work }) {
+/** 연도만 있고 링크는 없는 이력 항목 */
+function TimelineRow({ item }: { item: LinkItem }) {
   return (
-    <a
-      className={`cf-card${work.image ? " cf-card-illustrated" : ""}`}
-      href={work.href}
-      {...outboundProps(work.href)}
-    >
-      {work.image ? (
-        <span className="cf-card-art" aria-hidden="true">
-          <img src={work.image} alt="" loading="lazy" />
-        </span>
-      ) : null}
-      <span className="cf-card-body">
-        <span className="cf-card-icon" aria-hidden="true">
-          <img src={iconSrc(work.icon)} alt="" loading="lazy" />
-        </span>
-        <span className="cf-card-text">
-          <strong>{work.name}</strong>
-          <small>{work.description}</small>
-        </span>
-        <Arrow />
+    <li className="cf-row cf-row-static">
+      <span className="cf-row-year">{item.year}</span>
+      <span className="cf-row-copy">
+        <strong>{item.name}</strong>
+        {item.description ? <small>{item.description}</small> : null}
       </span>
-    </a>
+    </li>
   );
 }
 
-function Works() {
-  const [active, setActive] = useState<string>(ALL);
-
-  const shown = useMemo(
-    () => (active === ALL ? site.works : site.works.filter((w) => w.category === active)),
-    [active]
-  );
+function LinkRow({
+  item,
+  copiedValue,
+  onCopy
+}: {
+  item: LinkItem;
+  copiedValue: string | null;
+  onCopy: (value: string, fallbackHref?: string) => void;
+}) {
+  const isCopied = !!item.copy && copiedValue === item.copy;
 
   return (
-    <section className="cf-section" id="works" aria-label="만든 것들">
-      <div className="cf-section-head">
-        <h2>만든 것들</h2>
-      </div>
+    <li className="cf-row">
+      <a
+        href={item.href}
+        {...outboundProps(item.href)}
+        onClick={(event) => {
+          if (!item.copy) return;
+          event.preventDefault();
+          onCopy(item.copy, item.href);
+        }}
+      >
+        {item.icon ? (
+          <span className="cf-row-icon" aria-hidden="true">
+            <img src={iconSrc(item.icon)} alt="" loading="lazy" />
+          </span>
+        ) : null}
+        <span className="cf-row-copy">
+          <strong>{item.name}</strong>
+          {item.description ? <small>{isCopied ? "복사했습니다" : item.description}</small> : null}
+        </span>
+        {item.copy ? (
+          <span className={`cf-copy-badge${isCopied ? " cf-copy-badge-on" : ""}`}>
+            {isCopied ? "복사됨" : "복사"}
+          </span>
+        ) : (
+          <Arrow />
+        )}
+      </a>
+    </li>
+  );
+}
 
-      <div className="cf-filter" role="tablist" aria-label="활동 분류">
-        <button
-          type="button"
-          role="tab"
-          aria-selected={active === ALL}
-          className={`cf-chip${active === ALL ? " cf-chip-on" : ""}`}
-          onClick={() => setActive(ALL)}
-        >
-          전체 <em>{site.works.length}</em>
-        </button>
-        {usedCategories.map((cat) => {
-          const count = site.works.filter((w) => w.category === cat.id).length;
+function Panel({
+  group,
+  copiedValue,
+  onCopy
+}: {
+  group: Group;
+  copiedValue: string | null;
+  onCopy: (value: string, fallbackHref?: string) => void;
+}) {
+  return (
+    <div className="cf-panel" role="tabpanel" id={`panel-${group.id}`} aria-labelledby={`tab-${group.id}`}>
+      <div className="cf-panel-head">
+        <span className="cf-panel-icon" aria-hidden="true">
+          <img src={iconSrc(group.icon)} alt="" />
+        </span>
+        <div>
+          <h3>{group.name}</h3>
+          <p>{group.description}</p>
+        </div>
+      </div>
+      <ul className="cf-rows">
+        {group.items.map((item, index) =>
+          group.kind === "timeline" ? (
+            <TimelineRow key={`${item.name}-${index}`} item={item} />
+          ) : (
+            <LinkRow
+              key={`${item.name}-${index}`}
+              item={item}
+              copiedValue={copiedValue}
+              onCopy={onCopy}
+            />
+          )
+        )}
+      </ul>
+    </div>
+  );
+}
+
+function Shelf() {
+  const [activeId, setActiveId] = useState(shownGroups[0]?.id);
+  const [copiedValue, setCopiedValue] = useState<string | null>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+
+  const active = shownGroups.find((g) => g.id === activeId) ?? shownGroups[0];
+
+  const select = (id: string) => {
+    setActiveId(id);
+    // 좁은 화면에서는 패널이 목록 아래에 오므로 스크롤로 데려다 줍니다.
+    if (window.matchMedia("(max-width: 63.99rem)").matches) {
+      requestAnimationFrame(() => {
+        panelRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
+  };
+
+  /** 구형·제한 브라우저를 위한 대비책. 숨은 입력칸을 만들어 복사합니다. */
+  const legacyCopy = (value: string) => {
+    const field = document.createElement("textarea");
+    field.value = value;
+    field.setAttribute("readonly", "");
+    field.style.cssText = "position:fixed;top:-100px;opacity:0";
+    document.body.appendChild(field);
+    field.select();
+    let ok = false;
+    try {
+      ok = document.execCommand("copy");
+    } catch {
+      ok = false;
+    }
+    document.body.removeChild(field);
+    return ok;
+  };
+
+  const copy = async (value: string, fallbackHref?: string) => {
+    let ok = false;
+    try {
+      await navigator.clipboard.writeText(value);
+      ok = true;
+    } catch {
+      ok = legacyCopy(value);
+    }
+
+    if (ok) {
+      setCopiedValue(value);
+      window.setTimeout(() => setCopiedValue(null), 1800);
+      return;
+    }
+
+    // 복사가 끝내 안 되면 원래 링크 동작(메일 앱 열기)으로 넘깁니다.
+    if (fallbackHref) window.location.href = fallbackHref;
+  };
+
+  if (!active) return null;
+
+  return (
+    <section className="cf-shelf" id="shelf" aria-label="작업실">
+      <div className="cf-tabs" role="tablist" aria-orientation="vertical" aria-label="분류">
+        {shownGroups.map((group, index) => {
+          const on = group.id === active.id;
           return (
             <button
-              key={cat.id}
+              key={group.id}
               type="button"
               role="tab"
-              aria-selected={active === cat.id}
-              className={`cf-chip${active === cat.id ? " cf-chip-on" : ""}`}
-              onClick={() => setActive(cat.id)}
+              id={`tab-${group.id}`}
+              aria-selected={on}
+              aria-controls={`panel-${group.id}`}
+              className={`cf-tab${on ? " cf-tab-on" : ""}`}
+              onClick={() => select(group.id)}
             >
-              {cat.name} <em>{count}</em>
+              <span className="cf-tab-icon" aria-hidden="true">
+                <img src={iconSrc(group.icon)} alt="" />
+              </span>
+              <span className="cf-tab-copy">
+                <strong>{group.name}</strong>
+                <small>{group.description}</small>
+              </span>
+              <span className="cf-tab-meta" aria-hidden="true">
+                {String(index + 1).padStart(2, "0")} <i>/</i> {group.items.length}
+              </span>
             </button>
           );
         })}
       </div>
 
-      <div className="cf-grid">
-        {shown.map((work) => (
-          <WorkCard key={`${work.category}-${work.href}-${work.name}`} work={work} />
-        ))}
+      <div className="cf-panel-slot" ref={panelRef}>
+        <Panel group={active} copiedValue={copiedValue} onCopy={copy} />
       </div>
-    </section>
-  );
-}
-
-function Timeline() {
-  return (
-    <section className="cf-section cf-section-timeline" id="timeline" aria-label="활동 이력">
-      <div className="cf-section-head">
-        <h2>걸어온 길</h2>
-      </div>
-      <ol className="cf-timeline">
-        {site.timeline.map((entry, index) => (
-          <li key={`${entry.year}-${entry.title}-${index}`}>
-            <span className="cf-year">{entry.year}</span>
-            <div>
-              <h3>{entry.title}</h3>
-              <p>{entry.description}</p>
-            </div>
-          </li>
-        ))}
-      </ol>
     </section>
   );
 }
@@ -199,8 +274,7 @@ export default function Workroom() {
       <Hero />
       <main className="cf-main">
         <ProfileBand />
-        <Works />
-        <Timeline />
+        <Shelf />
       </main>
       <footer className="cf-footer">
         <p>{site.footer.line}</p>

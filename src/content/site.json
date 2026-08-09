@@ -2,18 +2,16 @@
   "meta": {
     "siteName": "도치쌤의 아늑한 숲",
     "tagline": "가르치고, 만들고, 기록합니다",
-    "description": "국어교사이자 연수 강사인 도치쌤의 작업실입니다. 수업에서 만든 것, 연수에서 나눈 것, 틈틈이 쓴 글을 한자리에 모아 둡니다.",
+    "description": "국어교사이자 연수 강사인 도치쌤의 작업실입니다. 진학 자료, 연수 기록, 수업 자료를 한자리에 모아 둡니다.",
     "ogImage": "/assets/og-cover.webp"
   },
 
   "hero": {
     "title": "도치쌤의\n아늑한 숲",
-    "lines": [
-      "왕초보도 문턱 없이 들어오는 자리를 만듭니다."
-    ],
+    "lines": ["왕초보도 문턱 없이 들어오는 자리를 만듭니다."],
     "image": "/assets/hero-desk.webp",
     "imageAlt": "밤의 서재에서 책을 펼치고 기록하는 고슴도치 도치쌤",
-    "cta": { "label": "작업실 둘러보기", "target": "works" }
+    "cta": { "label": "작업실 둘러보기", "target": "shelf" }
   },
 
   "profile": {
@@ -23,85 +21,116 @@
     "roles": ["국어교사", "연수 강사"],
     "note": {
       "label": "NOW MAKING",
-      "lines": [
-        "지금 만들고 있는 것을",
-        "여기에 한 줄씩 적어요"
-      ]
+      "lines": ["지금 만들고 있는 것을", "여기에 한 줄씩 적어요"]
     },
     "tags": []
   },
 
-  "contacts": [
-    { "label": "Email",     "value": "jasmint912@gmail.com",   "href": "mailto:jasmint912@gmail.com" },
-    { "label": "Blog",      "value": "보드라운고슴도치의 아늑한 숲",        "href": "https://blog.naver.com/thecozyforest912" },
-    { "label": "Instagram", "value": "@아이디",            "href": "https://instagram.com/" },
-    { "label": "강의 문의",  "value": "신청 폼 열기",       "href": "https://example.com" }
-  ],
+  "_안내": "groups의 각 항목이 왼쪽 버튼 하나가 됩니다. items에 링크를 계속 추가하면 됩니다. kind가 'timeline'이면 링크 없이 연도(year)와 설명만 나옵니다.",
 
-  "categories": [
-    { "id": "class",   "name": "수업",      "en": "CLASSROOM" },
-    { "id": "lecture", "name": "연수·강의", "en": "LECTURE" },
-    { "id": "writing", "name": "글·기록",   "en": "WRITING" },
-    { "id": "tool",    "name": "도구·자료", "en": "TOOLKIT" }
-  ],
-
-  "works": [
+  "groups": [
     {
-      "category": "class",
-      "name": "수업 자료 이름을 적어 주세요",
-      "description": "어떤 수업에서 어떻게 쓰는 자료인지 한 줄로.",
-      "href": "https://example.com",
-      "icon": "school"
+      "id": "admission",
+      "name": "진학·진로 자료",
+      "description": "생기부와 진로 설계를 돕는 자료",
+      "icon": "school",
+      "items": [
+        {
+          "name": "진학 자료 이름을 적어 주세요",
+          "description": "어떤 학생에게 어떻게 쓰는 자료인지 한 줄로.",
+          "href": "https://example.com",
+          "icon": "docs"
+        },
+        {
+          "name": "두 번째 진학 자료",
+          "description": "만든 계기나 쓰임을 적으면 좋습니다.",
+          "href": "https://example.com",
+          "icon": "manual"
+        }
+      ]
     },
     {
-      "category": "class",
-      "name": "두 번째 수업 작업물",
-      "description": "학생들이 무엇을 할 수 있게 되는지 적으면 좋습니다.",
-      "href": "https://example.com",
-      "icon": "docs"
+      "id": "lecture",
+      "name": "연수·강의",
+      "description": "선생님들과 나눈 연수 기록",
+      "icon": "manual",
+      "items": [
+        {
+          "name": "연수 제목을 적어 주세요",
+          "description": "2026 · 대상과 다루는 내용",
+          "href": "https://example.com",
+          "icon": "manual"
+        },
+        {
+          "name": "강의 문의 · 신청",
+          "description": "연수 요청을 받는 통로를 연결해 두세요.",
+          "href": "https://example.com",
+          "icon": "contact"
+        }
+      ]
     },
     {
-      "category": "lecture",
-      "name": "연수 제목을 적어 주세요",
-      "description": "대상과 다루는 내용을 한 줄로.",
-      "href": "https://example.com",
-      "icon": "manual"
+      "id": "class",
+      "name": "수업 자료",
+      "description": "교실에서 바로 쓰는 국어 수업 자료",
+      "icon": "docs",
+      "items": [
+        {
+          "name": "수업 자료 이름을 적어 주세요",
+          "description": "어떤 수업에서 어떻게 쓰는지 한 줄로.",
+          "href": "https://example.com",
+          "icon": "docs"
+        }
+      ]
     },
     {
-      "category": "lecture",
-      "name": "강의 신청 안내",
-      "description": "연수 요청을 받는 통로를 연결해 두세요.",
-      "href": "https://example.com",
-      "icon": "contact"
+      "id": "writing",
+      "name": "글·기록",
+      "description": "꾸준히 쓰고 남기는 곳",
+      "icon": "magazine",
+      "items": [
+        {
+          "name": "보드라운고슴도치의 아늑한 숲",
+          "description": "블로그에 남기는 기록",
+          "href": "https://blog.naver.com/thecozyforest912",
+          "icon": "naver-blog"
+        }
+      ]
     },
     {
-      "category": "writing",
-      "name": "블로그 · 브런치 글",
-      "description": "꾸준히 쓰고 있는 기록의 주소.",
-      "href": "https://example.com",
-      "icon": "magazine"
+      "id": "history",
+      "name": "걸어온 길",
+      "description": "연수·강의와 활동 이력",
+      "icon": "privacy",
+      "kind": "timeline",
+      "items": [
+        { "year": "2026", "name": "활동 제목을 적어 주세요", "description": "맡은 역할과 한 줄 설명" },
+        { "year": "2025", "name": "활동 제목을 적어 주세요", "description": "주제 · 참여 방식" },
+        { "year": "2025", "name": "활동 제목을 적어 주세요", "description": "대상과 활동 내용" },
+        { "year": "2024", "name": "기록하고 싶은 첫 활동", "description": "한 줄 설명" }
+      ]
     },
     {
-      "category": "tool",
-      "name": "만든 도구 이름",
-      "description": "선생님들이 바로 쓸 수 있는 자료나 도구.",
-      "href": "https://example.com",
-      "icon": "code"
-    },
-    {
-      "category": "tool",
-      "name": "자료 내려받기",
-      "description": "배포하는 파일이 있다면 여기에.",
-      "href": "https://example.com",
-      "icon": "download"
+      "id": "contact",
+      "name": "연락처",
+      "description": "jasmint912@gmail.com",
+      "icon": "contact",
+      "items": [
+        {
+          "name": "jasmint912@gmail.com",
+          "description": "누르면 주소가 복사됩니다",
+          "href": "mailto:jasmint912@gmail.com",
+          "icon": "contact",
+          "copy": "jasmint912@gmail.com"
+        },
+        {
+          "name": "보드라운고슴도치의 아늑한 숲",
+          "description": "네이버 블로그",
+          "href": "https://blog.naver.com/thecozyforest912",
+          "icon": "naver-blog"
+        }
+      ]
     }
-  ],
-
-  "timeline": [
-    { "year": "2026", "title": "활동 제목을 적어 주세요",        "description": "맡은 역할과 한 줄 설명" },
-    { "year": "2025", "title": "활동 제목을 적어 주세요",        "description": "주제 · 참여 방식" },
-    { "year": "2025", "title": "활동 제목을 적어 주세요",        "description": "대상과 활동 내용" },
-    { "year": "2024", "title": "기록하고 싶은 첫 활동",          "description": "한 줄 설명" }
   ],
 
   "footer": {

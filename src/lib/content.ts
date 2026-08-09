@@ -5,38 +5,31 @@ export type IconName =
   | "code" | "download" | "game" | "privacy"
   | "naver-blog" | "instagram" | "kakao-chat" | "kakao-group";
 
-export type Category = {
+export type LinkItem = {
+  name: string;
+  description?: string;
+  /** 링크 항목이면 필수. timeline 그룹에서는 생략합니다. */
+  href?: string;
+  icon?: IconName;
+  /** timeline 그룹에서 왼쪽에 표시할 연도 */
+  year?: string;
+  /** 값이 있으면 클릭 시 이동 대신 이 문자열을 복사합니다. */
+  copy?: string;
+};
+
+export type Group = {
   id: string;
   name: string;
-  en: string;
-};
-
-export type Work = {
-  category: string;
-  name: string;
   description: string;
-  href: string;
   icon: IconName;
-  /** 있으면 카드 위쪽에 그림이 깔립니다. */
-  image?: string;
-};
-
-export type TimelineEntry = {
-  year: string;
-  title: string;
-  description: string;
-};
-
-export type Contact = {
-  label: string;
-  value: string;
-  href: string;
+  /** "timeline"이면 연도 목록으로 그립니다. 없으면 링크 목록입니다. */
+  kind?: "timeline";
+  items: LinkItem[];
 };
 
 export type SiteContent = {
   meta: { siteName: string; tagline: string; description: string; ogImage: string };
   hero: {
-    /** 비워 두면 표시하지 않습니다. */
     eyebrow?: string;
     title: string;
     lines: string[];
@@ -52,24 +45,15 @@ export type SiteContent = {
     note: { label: string; lines: string[] };
     tags: string[];
   };
-  contacts: Contact[];
-  categories: Category[];
-  works: Work[];
-  timeline: TimelineEntry[];
+  groups: Group[];
   footer: { line: string; credit: string };
 };
 
-export const site = data as SiteContent;
+export const site = data as unknown as SiteContent;
 
 export const iconSrc = (icon: string) => `/icons/${icon}.svg`;
 
-export const isExternal = (href: string) => href.startsWith("http");
+export const isExternal = (href?: string) => !!href && href.startsWith("http");
 
-/** 카테고리 id로 이름을 찾습니다. 없는 id면 id를 그대로 돌려줍니다. */
-export const categoryName = (id: string) =>
-  site.categories.find((c) => c.id === id)?.name ?? id;
-
-/** 실제로 작업물이 하나라도 있는 카테고리만 필터 버튼으로 보여줍니다. */
-export const usedCategories = site.categories.filter((c) =>
-  site.works.some((w) => w.category === c.id)
-);
+/** 항목이 하나도 없는 그룹은 화면에 그리지 않습니다. */
+export const shownGroups = site.groups.filter((g) => g.items.length > 0);
