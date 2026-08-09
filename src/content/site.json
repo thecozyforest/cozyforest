@@ -44,7 +44,7 @@
       "items": [
         {
           "name": "출발 프롬프트 틀",
-          "description": "교실의 불편에서 시작해 AI에게 줄 사양까지 만드는 3단계 · 바이브코딩 연수에서 쓰는 틀",
+          "description": "바이브코딩 연수에서 쓰는 출발 프롬프트 틀",
           "href": "https://thecozyforest.github.io/dochis-warehouse/prompt_starter/",
           "icon": "code"
         },
