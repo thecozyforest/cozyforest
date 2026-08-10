@@ -109,12 +109,6 @@
           "icon": "download"
         },
         {
-          "name": "버저 — 수학여행 호출 앱",
-          "description": "누르면 모든 폰에 즉시 알림 · 설치 없이 링크만 열면 됩니다",
-          "href": "https://thecozyforest.github.io/buzzer/",
-          "icon": "kakao-group"
-        },
-        {
           "name": "칭찬샤워",
           "description": "설문 응답을 포스트잇 카드로 만들어 A4에 꽉 차게 인쇄합니다 · 파일은 브라우저 안에서만 처리",
           "href": "https://thecozyforest.github.io/dochis-warehouse/praise-shower/",
@@ -207,12 +201,6 @@
           "badge": "DoRms"
         },
         {
-          "name": "고교학점제 선택과목 상담기",
-          "description": "진로·희망 계열에 맞는 선택과목을 추천하고 이수 현황과 충족률을 확인합니다",
-          "href": "https://thecozyforest.github.io/dochis-warehouse/subject-advisor/",
-          "icon": "school"
-        },
-        {
           "name": "생기부 기반 면접 질문 생성기",
           "description": "2026 대입 · 대학별 후기 기반 맞춤 면접 질문",
           "href": "https://dorms.school/apps/15d58be8-7082-4da7-a997-e5fd638f10d8",
@@ -269,22 +257,10 @@
           "badge": "DoRms"
         },
         {
-          "name": "학생부종합전형 공개 가이드 모음",
-          "description": "교사용 진학 설계·관찰 기록과 학생·학부모 활동 설계를 모은 외부배포 묶음",
-          "href": "https://thecozyforest.github.io/dochis-warehouse/admissions-guidance-public-suite/",
-          "icon": "manual"
-        },
-        {
           "name": "2027 수능최저 조회기",
           "description": "성적표를 올리면 수능최저 충족 여부를 자동 계산 · 교과·학종 707개 + 논술 40개",
           "href": "https://thecozyforest.github.io/dochis-warehouse/csat-checker/",
           "icon": "docs"
-        },
-        {
-          "name": "8개 대학 학종 교차검증 패키지",
-          "description": "교사용 진학지도 가이드와 학생·학부모 공개용 자료, 교차점검 보고서",
-          "href": "https://thecozyforest.github.io/dochis-warehouse/admissions-guidance-crosschecked-final/",
-          "icon": "manual"
         },
         {
           "name": "진로관제센터",
