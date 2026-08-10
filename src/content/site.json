@@ -109,6 +109,12 @@
           "icon": "download"
         },
         {
+          "name": "버저 — 수학여행 호출 앱",
+          "description": "누르면 모든 폰에 즉시 알림 · 설치 없이 링크만 열면 됩니다",
+          "href": "https://thecozyforest.github.io/buzzer/",
+          "icon": "kakao-group"
+        },
+        {
           "name": "칭찬샤워",
           "description": "설문 응답을 포스트잇 카드로 만들어 A4에 꽉 차게 인쇄합니다 · 파일은 브라우저 안에서만 처리",
           "href": "https://thecozyforest.github.io/dochis-warehouse/praise-shower/",
@@ -199,6 +205,12 @@
           "href": "https://dorms.school/apps/cc3cc7ab-82d0-4b26-8842-3a6b8dc0d792",
           "icon": "school",
           "badge": "DoRms"
+        },
+        {
+          "name": "고교학점제 선택과목 상담기",
+          "description": "진로·희망 계열에 맞는 선택과목을 추천하고 이수 현황과 충족률을 확인합니다",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/subject-advisor/",
+          "icon": "school"
         },
         {
           "name": "생기부 기반 면접 질문 생성기",
@@ -327,6 +339,12 @@
           "href": "https://dorms.school/resources/p/26b7caaa-aaca-4112-b782-5b7aefd82e00",
           "icon": "download",
           "badge": "DoRms"
+        },
+        {
+          "name": "창체활동 포트폴리오 도우미",
+          "description": "자율·동아리·봉사·진로 활동을 정리해 포트폴리오로 구성합니다",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/Inquiry_Portfolio_Assistant/",
+          "icon": "manual"
         }
       ]
     },
@@ -368,6 +386,12 @@
           "href": "https://dorms.school/apps/53f9e85e-3b95-4c40-afe6-0c1348428c6e",
           "icon": "manual",
           "badge": "DoRms"
+        },
+        {
+          "name": "지역 인구 탐구 대시보드",
+          "description": "최대 5개 지역을 비교하고 인구 피라미드로 정밀 분석 · 수업 탐구용",
+          "href": "https://thecozyforest.github.io/population/",
+          "icon": "docs"
         }
       ]
     },
