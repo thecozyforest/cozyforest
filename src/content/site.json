@@ -453,6 +453,18 @@
           "description": "네이버 블로그",
           "href": "https://blog.naver.com/thecozyforest912",
           "icon": "naver-blog"
+        },
+        {
+          "name": "@usermaria912",
+          "description": "인스타그램",
+          "href": "https://instagram.com/usermaria912",
+          "icon": "instagram"
+        },
+        {
+          "name": "@thecozyforest",
+          "description": "새 인스타그램 · 준비 중",
+          "href": "https://instagram.com/thecozyforest",
+          "icon": "instagram"
         }
       ]
     }
