@@ -121,6 +121,13 @@
           "icon": "download"
         },
         {
+          "name": "아무습관 챌린지",
+          "description": "원하는 습관을 정해 매일 기록하고 달성률을 확인합니다",
+          "href": "https://dorms.school/apps/bc1b81a4-0bc7-4131-b80e-c7176702da9d",
+          "icon": "game",
+          "badge": "DoRms"
+        },
+        {
           "name": "지구 한 바퀴",
           "description": "학생 스터디플랜을 원격으로 관리합니다",
           "href": "https://dorms.school/apps/8a86cee1-b8e1-4108-af58-9b0fd2052613",
