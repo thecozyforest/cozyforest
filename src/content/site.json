@@ -222,6 +222,12 @@
           "badge": "DoRms"
         },
         {
+          "name": "모두의 면접 준비기 Pro — 사용 안내서",
+          "description": "가상 학생 화면으로 13단계를 짚어 주는 공개 안내서",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/Interview_Prep_Guide/",
+          "icon": "manual"
+        },
+        {
           "name": "수시지원 상담카드 수합앱",
           "description": "학생 상담카드를 실시간으로 수합하고 변경합니다",
           "href": "https://dorms.school/apps/d851406e-d292-434c-bb25-7109922541d1",
