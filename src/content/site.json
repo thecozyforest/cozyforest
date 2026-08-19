@@ -121,6 +121,13 @@
           "icon": "download"
         },
         {
+          "name": "엄지척 — 학급관리 올인원 앱",
+          "description": "학급 운영에 필요한 기능을 한 곳에 모은 앱",
+          "href": "https://dorms.school/apps/0bb59941-20dd-47c3-a60a-63e872b29bce",
+          "icon": "school",
+          "badge": "DoRms"
+        },
+        {
           "name": "아무습관 챌린지",
           "description": "원하는 습관을 정해 매일 기록하고 달성률을 확인합니다",
           "href": "https://dorms.school/apps/bc1b81a4-0bc7-4131-b80e-c7176702da9d",
