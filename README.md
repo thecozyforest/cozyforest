@@ -1,9 +1,9 @@
 # The Cozy Forest 🦔
 
-**도치쌤의 아늑한 숲** — 가르치고, 만들고, 기록하는 사람의 링크 페이지입니다.
+**도치쌤의 아늑한 숲** — 가르치고, 만들고, 기록하는 사람의 페이지입니다.
 
-밤의 서재 히어로에서 시작해 종이빛 본문으로 이어지고, 활동을 카테고리로 걸러 볼 수 있습니다.
-링크트리처럼 링크를 모으면서 포트폴리오처럼 이력까지 담습니다.
+밤의 서재 히어로에서 시작해 종이빛 본문으로 이어집니다.
+링크를 모으는 데서 멈추지 않고, 대표 작업 · 경력 · 저서 · 강의까지 한 장에 담습니다.
 
 ## 빠른 시작
 
@@ -14,24 +14,46 @@ npm run dev
 
 브라우저에서 `http://localhost:3000`을 엽니다.
 
+## 화면 순서
+
+```
+첫 화면 → 프로필 → 소개(경력 요약 + 숫자 + 연표) → 처음 오셨다면(입구 3개)
+  → 대표 작업 6개 → 분류형 작업실 → 저서·집필 → 연수·강의 + 문의
+```
+
 ## 내 것으로 바꾸기
 
 고칠 파일은 **`src/content/site.json` 하나**입니다. 코드는 건드리지 않아도 됩니다.
 
 | 항목 | 위치 | 설명 |
 |---|---|---|
-| 사이트 이름·설명 | `meta` | 브라우저 탭 제목, 검색·공유 시 나오는 문구 |
+| 사이트 이름·검색 문구 | `meta` | 탭 제목, 검색·공유 문구, SNS 주소, 검색엔진 확인 코드 |
 | 첫 화면 문구 | `hero` | `title`의 `\n`은 줄바꿈입니다 |
-| 프로필·포스트잇·태그 | `profile` | `note.lines`가 손글씨로 나옵니다 |
-| 연락처 | `contacts` | 메일은 `mailto:`, 나머지는 `https://` |
-| **활동 분류** | `categories` | 필터 버튼이 됩니다. 늘리고 줄여도 됩니다 |
-| 작업물 카드 | `works` | `category`는 위 `categories`의 `id`와 맞춥니다 |
-| 이력 | `timeline` | 연도 + 제목 + 한 줄 설명 |
+| 프로필·포스트잇 | `profile` | `note.lines`가 손글씨로 나옵니다 |
+| 소개·숫자·연표 | `intro` | 20초짜리 경력 요약 자리 |
+| 처음 오셨다면 | `entries` | `target`은 아래 `groups`의 `id`입니다 |
+| **대표 작업** | `featured` | 주소를 다시 적지 않고 `groups`의 항목을 가리킵니다 |
+| 분류와 링크 | `groups` | 왼쪽 탭 하나 = `groups` 항목 하나 |
+| 저서·집필 | `credibility` | 어느 그룹에서 책을 뽑을지 지정합니다 |
+| 연수·강의 | `speaking` | 강의 주제, 문의 버튼, 최근 강의 |
+| 푸터 | `footer` | 마지막 인사말 |
 
-- `works`의 `icon`은 `public/icons/`에 있는 파일 이름을 씁니다
+### 알아 두면 좋은 규칙
+
+- `groups[].items[]`에서 `href`를 빼면 눌리지 않는 기록(연수 이력 등)이 되고, `year`를 넣으면 아이콘 자리에 연도가 들어갑니다. `badge`는 오른쪽에 붙는 작은 표시(`DoRms` 등), `copy`를 넣으면 클릭 시 이동 대신 복사됩니다.
+- `icon`은 `public/icons/`에 있는 파일 이름을 씁니다
   (`school` `docs` `manual` `contact` `magazine` `code` `download` `game` `privacy` `naver-blog` `instagram` `kakao-chat` `kakao-group`).
-- `works`에 `image`를 넣으면 카드 위에 그림이 깔립니다. 넣지 않으면 아이콘만 나옵니다.
+- **대표 작업은 주소를 적지 않습니다.** `{"group": "admission", "name": "수시 입결 뷰어", "why": "..."}`처럼 가리키기만 하면 주소·아이콘·배지를 원본에서 가져옵니다. 원본 이름을 바꾸면 그 카드는 사라집니다.
+- **숫자는 직접 세지 않습니다.** `intro.stats`에 `{"countOf": "admission", "label": "진학·입시 도구"}`를 넣으면 그 그룹의 항목 수가, `{"sinceYear": 2014, "unit": "년+", "label": "..."}`를 넣으면 올해 기준 경과 연수가 들어갑니다.
+- 저서 목록은 `credibility.sourceGroup`이 가리키는 그룹에서 `year`가 있는 항목을 자동으로 뽑습니다.
 - 사진은 `public/assets/`에 넣고 `/assets/파일명` 으로 씁니다.
+
+## 검색에 걸리게 하기
+
+- 탭 제목과 공유 제목은 `meta.seoTitle`입니다. 브랜드명보다 **이름을 앞에** 두는 편이 검색에 유리합니다.
+- `layout.tsx`가 `Person` + `WebSite` 구조화 데이터(JSON-LD)를 자동으로 넣습니다. SNS·블로그 주소는 `meta.sameAs`에 적어 주세요.
+- `/robots.txt`와 `/sitemap.xml`은 `src/app/robots.ts`, `src/app/sitemap.ts`에서 자동 생성됩니다.
+- Google Search Console과 네이버 서치어드바이저에서 소유 확인 코드를 받으면 `meta.verification.google` / `meta.verification.naver`에 붙여넣으세요. 비워 두면 태그가 아예 붙지 않습니다.
 
 ## 색을 바꾸고 싶다면
 
@@ -54,7 +76,7 @@ npm run dev
 
 GitHub 저장소를 [Vercel](https://vercel.com)에서 Import 하면 끝입니다.
 배포 주소가 생기면 Vercel 환경변수에 `NEXT_PUBLIC_SITE_URL`을 그 주소로 넣어 주세요.
-공유 이미지가 제대로 뜨려면 이 값이 필요합니다.
+공유 이미지와 `sitemap.xml`, `canonical` 주소가 제대로 뜨려면 이 값이 필요합니다.
 
 ```bash
 npm run build   # 배포 전 확인
