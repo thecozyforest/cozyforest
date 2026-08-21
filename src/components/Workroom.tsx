@@ -1,7 +1,18 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { site, iconSrc, isExternal, shownGroups, type Group, type LinkItem } from "@/lib/content";
+import {
+  site,
+  iconSrc,
+  isExternal,
+  shownGroups,
+  featuredItems,
+  bookItems,
+  lectureHistory,
+  statValue,
+  type Group,
+  type LinkItem
+} from "@/lib/content";
 
 function Arrow() {
   return (
@@ -75,6 +86,103 @@ function ProfileBand() {
             ))}
           </div>
         ) : null}
+      </div>
+    </section>
+  );
+}
+
+/** 기경민은 이런 사람 — 20초짜리 경력 요약과 확인 가능한 숫자. */
+function IntroCard() {
+  const { intro } = site;
+  return (
+    <section className="cf-intro" id="about" aria-label="소개">
+      <div className="cf-intro-lead">
+        <span className="cf-eyebrow">{intro.eyebrow}</span>
+        <p className="cf-intro-arc">{intro.headline}</p>
+        <p className="cf-intro-body">
+          {intro.lines.map((line) => (
+            <span key={line}>{line}</span>
+          ))}
+        </p>
+        <dl className="cf-stats">
+          {intro.stats.map((stat) => (
+            <div key={stat.label}>
+              <dt>{statValue(stat)}</dt>
+              <dd>{stat.label}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
+      <ol className="cf-timeline">
+        {intro.timeline.map((step) => (
+          <li key={step.year}>
+            <span className="cf-timeline-year">{step.year}</span>
+            <span className="cf-timeline-copy">
+              <strong>{step.title}</strong>
+              <small>{step.description}</small>
+            </span>
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
+}
+
+/** 처음 온 사람에게 입구 세 개만 알려 줍니다. */
+function Entries({ onOpen }: { onOpen: (groupId: string) => void }) {
+  const { entries } = site;
+  return (
+    <section className="cf-entries" aria-label={entries.title}>
+      <div className="cf-entries-head">
+        <h3>{entries.title}</h3>
+        <p>{entries.description}</p>
+      </div>
+      <div className="cf-entries-list">
+        {entries.items.map((entry) => (
+          <button key={entry.target} type="button" onClick={() => onOpen(entry.target)}>
+            <strong>{entry.question}</strong>
+            <span>
+              {entry.label}
+              <i aria-hidden="true">→</i>
+            </span>
+          </button>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+/** 대표 작업 — 카테고리를 파고들지 않아도 보이는 자리. */
+function Featured() {
+  const { featured } = site;
+  if (featuredItems.length === 0) return null;
+
+  return (
+    <section className="cf-featured" id="featured" aria-label={featured.title}>
+      <div className="cf-section-head">
+        <span className="cf-eyebrow">{featured.eyebrow}</span>
+        <h3>{featured.title}</h3>
+        <p>{featured.description}</p>
+      </div>
+      <div className="cf-cards">
+        {featuredItems.map((item) => (
+          <a key={item.name} className="cf-card" href={item.href} {...outboundProps(item.href)}>
+            <span className="cf-card-top">
+              {item.icon ? (
+                <span className="cf-card-icon" aria-hidden="true">
+                  <img src={iconSrc(item.icon)} alt="" loading="lazy" />
+                </span>
+              ) : null}
+              <span className="cf-card-kind">{item.groupName}</span>
+              <span className="cf-card-where">{item.badge ? item.badge : "공개"}</span>
+            </span>
+            <strong>{item.name}</strong>
+            <p className="cf-card-why">{item.why}</p>
+            {item.description ? <small>{item.description}</small> : null}
+            <Arrow />
+          </a>
+        ))}
       </div>
     </section>
   );
@@ -185,22 +293,18 @@ function Panel({
   );
 }
 
-function Shelf() {
-  const [activeId, setActiveId] = useState(shownGroups[0]?.id);
+function Shelf({
+  activeId,
+  onSelect,
+  panelRef
+}: {
+  activeId?: string;
+  onSelect: (id: string) => void;
+  panelRef: React.RefObject<HTMLDivElement | null>;
+}) {
   const [copiedValue, setCopiedValue] = useState<string | null>(null);
-  const panelRef = useRef<HTMLDivElement>(null);
 
   const active = shownGroups.find((g) => g.id === activeId) ?? shownGroups[0];
-
-  const select = (id: string) => {
-    setActiveId(id);
-    // 좁은 화면에서는 패널이 목록 아래에 오므로 스크롤로 데려다 줍니다.
-    if (window.matchMedia("(max-width: 63.99rem)").matches) {
-      requestAnimationFrame(() => {
-        panelRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
-    }
-  };
 
   /** 구형·제한 브라우저를 위한 대비책. 숨은 입력칸을 만들어 복사합니다. */
   const legacyCopy = (value: string) => {
@@ -255,7 +359,7 @@ function Shelf() {
               aria-selected={on}
               aria-controls={`panel-${group.id}`}
               className={`cf-tab${on ? " cf-tab-on" : ""}`}
-              onClick={() => select(group.id)}
+              onClick={() => onSelect(group.id)}
             >
               <span className="cf-tab-icon" aria-hidden="true">
                 <img src={iconSrc(group.icon)} alt="" />
@@ -279,13 +383,131 @@ function Shelf() {
   );
 }
 
+/** 저서·집필 — 웹으로 넓히기 전부터 쌓아 온 쪽. */
+function Books() {
+  const { credibility } = site;
+  if (bookItems.length === 0) return null;
+
+  return (
+    <section className="cf-books" id="books" aria-label={credibility.title}>
+      <div className="cf-section-head">
+        <span className="cf-eyebrow">{credibility.eyebrow}</span>
+        <h3>{credibility.title}</h3>
+        <p>{credibility.lead}</p>
+      </div>
+      <ul className="cf-book-list">
+        {bookItems.map((book) => {
+          const inner = (
+            <>
+              <span className="cf-book-year">{book.year}</span>
+              <span className="cf-book-copy">
+                <strong>{book.name}</strong>
+                {book.description ? <small>{book.description}</small> : null}
+              </span>
+              {book.href ? <Arrow /> : null}
+            </>
+          );
+          return (
+            <li key={book.name}>
+              {book.href ? (
+                <a href={book.href} {...outboundProps(book.href)}>
+                  {inner}
+                </a>
+              ) : (
+                <span className="cf-book-static">{inner}</span>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  );
+}
+
+/** 연수 — 일지가 아니라 강사 포트폴리오로 읽히도록. */
+function Speaking({ onOpen }: { onOpen: (groupId: string) => void }) {
+  const { speaking } = site;
+  const recent = lectureHistory.slice(0, 4);
+
+  return (
+    <section className="cf-speaking" id="speaking" aria-label={speaking.title}>
+      <div className="cf-speaking-main">
+        <span className="cf-eyebrow">{speaking.brand}</span>
+        <h3>{speaking.title}</h3>
+        <p className="cf-speaking-lead">{speaking.lead}</p>
+        <p className="cf-speaking-body">{speaking.description}</p>
+
+        <span className="cf-speaking-label">강의 가능한 주제</span>
+        <div className="cf-topics">
+          {speaking.topics.map((topic) => (
+            <span key={topic}>{topic}</span>
+          ))}
+        </div>
+
+        <a className="cf-speaking-cta" href={speaking.cta.href}>
+          {speaking.cta.label}
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div className="cf-speaking-history">
+        <span className="cf-speaking-label">최근 강의</span>
+        <ul>
+          {recent.map((item, index) => (
+            <li key={`${item.name}-${index}`}>
+              <span className="cf-row-year">{item.year}</span>
+              <span className="cf-row-copy">
+                <strong>{item.name}</strong>
+                {item.description ? <small>{item.description}</small> : null}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <button type="button" className="cf-more" onClick={() => onOpen(speaking.historyGroup)}>
+          전체 연수 기록 보기
+          <span aria-hidden="true">↑</span>
+        </button>
+      </div>
+    </section>
+  );
+}
+
 export default function Workroom() {
+  const [activeId, setActiveId] = useState(shownGroups[0]?.id);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const shelfRef = useRef<HTMLDivElement>(null);
+
+  const select = (id: string) => {
+    setActiveId(id);
+    // 좁은 화면에서는 패널이 목록 아래에 오므로 스크롤로 데려다 줍니다.
+    if (window.matchMedia("(max-width: 63.99rem)").matches) {
+      requestAnimationFrame(() => {
+        panelRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
+  };
+
+  /** 다른 구역에서 작업실을 열 때는 선반까지 데려다 줍니다. */
+  const openGroup = (id: string) => {
+    setActiveId(id);
+    requestAnimationFrame(() => {
+      shelfRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  };
+
   return (
     <div className="cf-root">
       <Hero />
       <main className="cf-main">
         <ProfileBand />
-        <Shelf />
+        <IntroCard />
+        <Entries onOpen={openGroup} />
+        <Featured />
+        <div className="cf-shelf-anchor" ref={shelfRef}>
+          <Shelf activeId={activeId} onSelect={select} panelRef={panelRef} />
+        </div>
+        <Books />
+        <Speaking onOpen={openGroup} />
       </main>
       <footer className="cf-footer">
         <p>{site.footer.line}</p>

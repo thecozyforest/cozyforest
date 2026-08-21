@@ -705,3 +705,603 @@ nextjs-portal,
     scroll-behavior: auto !important;
   }
 }
+
+/* ─────────────────────────────────────────────
+   포트폴리오 층 — 소개 · 입구 · 대표작 · 저서 · 연수
+   링크 모음 위에 얹는 다섯 구역입니다.
+   ───────────────────────────────────────────── */
+
+.cf-section-head {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding-bottom: 1rem;
+}
+
+.cf-section-head .cf-eyebrow {
+  color: var(--berry);
+  opacity: 0.75;
+}
+
+.cf-section-head h3 {
+  margin: 0.35rem 0 0;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.cf-section-head p {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--cocoa);
+  opacity: 0.9;
+}
+
+/* ── 기경민은 이런 사람 ────────────────────── */
+
+.cf-intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding-top: 2.2rem;
+  scroll-margin-top: 1rem;
+}
+
+.cf-intro-arc {
+  margin: 0.5rem 0 0;
+  font-size: clamp(0.95rem, 2.6vw, 1.08rem);
+  font-weight: 800;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  color: var(--bark);
+}
+
+.cf-intro-body {
+  margin: 0.6rem 0 0;
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: var(--cocoa);
+}
+
+.cf-intro-body span {
+  display: block;
+}
+
+.cf-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin: 1.1rem 0 0;
+  padding: 0;
+}
+
+.cf-stats div {
+  padding: 0.75rem 0.9rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.cf-stats dt {
+  font-size: 1.45rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--berry);
+}
+
+.cf-stats dd {
+  margin: 0.2rem 0 0;
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--cocoa);
+}
+
+.cf-timeline {
+  margin: 0;
+  padding: 1.1rem 1.2rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  list-style: none;
+}
+
+.cf-timeline li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  padding: 0.62rem 0;
+  border-bottom: 1px dashed var(--line);
+}
+
+.cf-timeline li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0.1rem;
+}
+
+.cf-timeline li:first-child {
+  padding-top: 0.1rem;
+}
+
+.cf-timeline-year {
+  flex: none;
+  width: 2.9rem;
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: var(--moss);
+}
+
+.cf-timeline-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.cf-timeline-copy strong {
+  display: block;
+  font-size: 0.93rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.cf-timeline-copy small {
+  display: block;
+  margin-top: 0.12rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--cocoa);
+  opacity: 0.85;
+}
+
+/* ── 처음 오셨다면 ─────────────────────────── */
+
+.cf-entries {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding-top: 2.2rem;
+}
+
+.cf-entries-head h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.cf-entries-head p {
+  margin: 0.2rem 0 0;
+  font-size: 0.82rem;
+  color: var(--cocoa);
+  opacity: 0.9;
+}
+
+.cf-entries-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.55rem;
+  margin-top: 0.9rem;
+}
+
+.cf-entries-list button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  width: 100%;
+  min-height: 64px;
+  padding: 0.8rem 1.1rem;
+  border: 1px dashed var(--clay);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.66);
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease,
+    border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cf-entries-list button:hover {
+  transform: translateX(4px);
+  border-style: solid;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.cf-entries-list strong {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.cf-entries-list span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
+  font-size: 0.79rem;
+  font-weight: 700;
+  color: var(--berry);
+}
+
+.cf-entries-list i {
+  font-style: normal;
+  transition: transform 0.2s ease;
+}
+
+.cf-entries-list button:hover i {
+  transform: translateX(3px);
+}
+
+/* ── 대표 작업 ─────────────────────────────── */
+
+.cf-featured {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding-top: 2.4rem;
+  scroll-margin-top: 1rem;
+}
+
+.cf-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.7rem;
+}
+
+.cf-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.05rem 1.1rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.cf-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--clay);
+  box-shadow: var(--shadow-md);
+}
+
+.cf-card:hover .cf-arrow {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
+.cf-card-top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+}
+
+.cf-card-icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  flex: none;
+  border-radius: 10px;
+  background: var(--paper);
+}
+
+.cf-card-icon img {
+  width: 17px;
+  height: 17px;
+  opacity: 0.72;
+}
+
+.cf-card-kind {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--berry);
+}
+
+.cf-card-where {
+  margin-left: auto;
+  flex: none;
+  padding: 0.2rem 0.52rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: var(--cocoa);
+  opacity: 0.85;
+}
+
+.cf-card > strong {
+  font-size: 1.02rem;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.cf-card-why {
+  margin: 0.42rem 0 0;
+  font-size: 0.86rem;
+  line-height: 1.62;
+  color: var(--bark);
+}
+
+.cf-card > small {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--cocoa);
+  opacity: 0.78;
+}
+
+.cf-card > .cf-arrow {
+  align-self: flex-end;
+  margin-top: 0.6rem;
+}
+
+/* ── 선반 앵커 ─────────────────────────────── */
+
+.cf-shelf-anchor {
+  scroll-margin-top: 1rem;
+}
+
+/* ── 저서·집필 ─────────────────────────────── */
+
+.cf-books {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding-top: 2.6rem;
+  scroll-margin-top: 1rem;
+}
+
+.cf-book-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cf-book-list a,
+.cf-book-static {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  min-height: 58px;
+  height: 100%;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  background: rgba(245, 237, 224, 0.55);
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.cf-book-list a:hover {
+  border-color: var(--clay);
+  background: #fff;
+  transform: translateX(3px);
+}
+
+.cf-book-list a:hover .cf-arrow {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
+.cf-book-year {
+  flex: none;
+  width: 2.9rem;
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: var(--moss);
+}
+
+.cf-book-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.cf-book-copy strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.cf-book-copy small {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--cocoa);
+  opacity: 0.85;
+}
+
+/* ── 연수·강의 : 강사 포트폴리오 ───────────── */
+
+.cf-speaking {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding-top: 2.6rem;
+  scroll-margin-top: 1rem;
+}
+
+.cf-speaking-main {
+  padding: 1.4rem 1.3rem 1.5rem;
+  border-radius: 24px;
+  background: var(--bark);
+  color: var(--cream);
+  box-shadow: var(--shadow-md);
+}
+
+.cf-speaking-main .cf-eyebrow {
+  color: var(--lamp);
+  letter-spacing: 0.12em;
+}
+
+.cf-speaking-main h3 {
+  margin: 0.5rem 0 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.cf-speaking-lead {
+  margin: 0.25rem 0 0;
+  font-family: var(--hand);
+  font-size: 1.55rem;
+  line-height: 1.3;
+  color: var(--lamp);
+}
+
+.cf-speaking-body {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: rgba(251, 246, 238, 0.8);
+}
+
+.cf-speaking-label {
+  display: block;
+  margin-top: 1.15rem;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  opacity: 0.6;
+}
+
+.cf-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.55rem;
+}
+
+.cf-topics span {
+  padding: 0.34rem 0.7rem;
+  border: 1px solid rgba(251, 246, 238, 0.28);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.cf-speaking-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 48px;
+  margin-top: 1.25rem;
+  padding: 0 1.3rem;
+  border-radius: 999px;
+  background: var(--lamp);
+  color: var(--night);
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: 0 16px 34px -20px rgba(242, 180, 92, 0.95);
+  transition: transform 0.22s ease;
+}
+
+.cf-speaking-cta:hover {
+  transform: translateY(-2px);
+}
+
+.cf-speaking-cta span {
+  transition: transform 0.22s ease;
+}
+
+.cf-speaking-cta:hover span {
+  transform: translateX(3px);
+}
+
+.cf-speaking-history {
+  padding: 1.15rem 1.1rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.cf-speaking-history .cf-speaking-label {
+  margin-top: 0;
+  color: var(--cocoa);
+  opacity: 0.75;
+}
+
+.cf-speaking-history ul {
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cf-speaking-history li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  padding: 0.55rem 0.1rem;
+  border-bottom: 1px dashed var(--line);
+}
+
+.cf-speaking-history li:last-child {
+  border-bottom: 0;
+}
+
+.cf-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.85rem;
+  padding: 0.58rem 0.95rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--bark);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.cf-more:hover {
+  border-color: var(--clay);
+  background: var(--paper);
+}
+
+/* ── 반응형 : 넓은 화면 ────────────────────── */
+
+@media (min-width: 64rem) {
+  .cf-intro {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 2rem;
+    padding-top: 3rem;
+  }
+
+  .cf-entries-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cf-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.85rem;
+  }
+
+  .cf-book-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cf-speaking {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 1.4rem;
+  }
+
+  .cf-speaking-main {
+    padding: 1.8rem 1.7rem 1.9rem;
+  }
+}

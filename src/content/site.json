@@ -1,8 +1,32 @@
 {
   "meta": {
     "siteName": "도치쌤의 아늑한 숲",
+    "personName": "기경민",
+    "alternateName": "도치쌤",
     "tagline": "가르치고, 만들고, 기록합니다",
-    "description": "학교 현장의 막막한 문제를 말과 구조로 풀어냅니다. 진학·생기부 도구, 수업 자료, 연수 기록을 한자리에 모아 둔 국어교사 기경민(도치쌤)의 작업실입니다.",
+    "seoTitle": "기경민(도치쌤) | 고등학교 국어교사 · 진학지도 · AI 교육도구",
+    "description": "고등학교 국어교사 기경민(도치쌤)의 작업실. 학교 현장의 막막한 문제를 말과 구조로 풀어냅니다. 생기부 분석기·수시 입결 뷰어·방배치 마법사 같은 교사용 웹도구와 진학지도·학급운영·AI 바이브코딩 연수 자료를 한자리에 모았습니다.",
+    "keywords": [
+      "기경민",
+      "도치쌤",
+      "고등학교 국어교사",
+      "진학지도",
+      "생활기록부",
+      "학급운영",
+      "교사용 웹도구",
+      "바이브코딩 연수",
+      "AI 교육도구"
+    ],
+    "sameAs": [
+      "https://instagram.com/usermaria912",
+      "https://instagram.com/thecozyforest",
+      "https://blog.naver.com/thecozyforest912",
+      "https://github.com/thecozyforest"
+    ],
+    "verification": {
+      "google": "",
+      "naver": ""
+    },
     "ogImage": "/assets/og-cover.webp"
   },
   "hero": {
@@ -23,7 +47,7 @@
     "imageAlt": "안경 쓴 고슴도치 도치쌤 프로필",
     "roles": [
       "기경민 · 고등학교 국어교사",
-      "학급운영 · 진학지도 · AI 코딩 연수"
+      "국어교육 · 학급운영 · 진학지도 · AI 코딩 · 교사용 도구 제작"
     ],
     "note": {
       "label": "",
@@ -33,6 +57,118 @@
       ]
     },
     "tags": []
+  },
+  "intro": {
+    "eyebrow": "ABOUT",
+    "headline": "국어교사 → 교재 저자 → 진학지도 → 교육도구 제작 → AI·바이브코딩 연수",
+    "lines": [
+      "학교 현장에서 생기는 막막한 문제를 말과 구조로 풀어냅니다.",
+      "필요한 도구는 직접 만들어 교실에서 써 보고, 그 과정을 연수로 나눕니다."
+    ],
+    "stats": [
+      {
+        "sinceYear": 2014,
+        "unit": "년+",
+        "label": "국어 교재·콘텐츠 집필"
+      },
+      {
+        "countOf": "admission",
+        "label": "진학·입시 도구"
+      },
+      {
+        "countOf": "classroom",
+        "label": "학급운영 자료"
+      },
+      {
+        "countOf": "lecture",
+        "label": "연수·강의 기록"
+      }
+    ],
+    "timeline": [
+      {
+        "year": "2014",
+        "title": "국어 교재 집필 시작",
+        "description": "이투스북 《고전 시가 몽땅 벗기기》 공저"
+      },
+      {
+        "year": "2016",
+        "title": "수능 기출 문제집 집필",
+        "description": "이투스북 《이기출 국어 문법》 공저"
+      },
+      {
+        "year": "2022",
+        "title": "학습법 단행본 공저",
+        "description": "꿈구두 《국어 오답의 모든 것: 문학편》"
+      },
+      {
+        "year": "2025",
+        "title": "교사 연수 시작",
+        "description": "진학지도 · 첫 고3 담임 · 학급운영"
+      },
+      {
+        "year": "2026",
+        "title": "교사용 웹도구 배포와 바이브코딩 연수",
+        "description": "창비교육 《고등학교 독서와 작문 자습서》 공저"
+      }
+    ]
+  },
+  "entries": {
+    "title": "처음 오셨다면",
+    "description": "고민에 가까운 쪽부터 열어 보세요.",
+    "items": [
+      {
+        "question": "학급운영이 고민이에요",
+        "label": "학급 운영 자료",
+        "target": "classroom"
+      },
+      {
+        "question": "진학지도가 막막해요",
+        "label": "진학·입시 도구",
+        "target": "admission"
+      },
+      {
+        "question": "AI로 뭔가 만들어보고 싶어요",
+        "label": "바이브코딩 시작 자료",
+        "target": "lecture"
+      }
+    ]
+  },
+  "featured": {
+    "eyebrow": "SELECTED WORK",
+    "title": "대표 작업",
+    "description": "여섯 개만 골랐습니다. 나머지는 아래 작업실에 분류해 두었습니다.",
+    "items": [
+      {
+        "group": "admission",
+        "name": "생기부 분석기 Pro",
+        "why": "세특·행특을 학생마다 다시 읽고 다시 쓰는 일이 버거워서 만들었습니다."
+      },
+      {
+        "group": "admission",
+        "name": "모두의 면접 준비기 Pro",
+        "why": "생기부 PDF 하나로 서류 기반 면접 문항을 설계합니다. 면접 대비를 혼자 감당하던 담임을 위해."
+      },
+      {
+        "group": "admission",
+        "name": "수시 입결 뷰어",
+        "why": "상담할 때마다 어디가를 새로 뒤지지 않도록 2023~2026 입결을 한 화면에 모았습니다."
+      },
+      {
+        "group": "admission",
+        "name": "2027 수능최저 조회기",
+        "why": "성적표를 올리면 교과·학종 707개와 논술 40개 전형의 최저 충족을 자동으로 계산합니다."
+      },
+      {
+        "group": "classroom",
+        "name": "방배치 마법사",
+        "why": "수학여행 방배정에서 해마다 나던 갈등을, 감이 아니라 기준과 절차로 바꿨습니다."
+      },
+      {
+        "group": "lecture",
+        "name": "출발 프롬프트 틀",
+        "why": "코딩은 나와 무관하다고 느끼던 선생님이 첫 앱을 만들 때 붙잡는 출발점입니다."
+      }
+    ]
   },
   "_안내": "groups의 각 항목이 왼쪽 버튼 하나가 됩니다. items에 계속 추가하면 됩니다. href를 빼면 눌리지 않는 기록(연수 이력 등)이 되고, year를 넣으면 아이콘 자리에 연도가 들어갑니다. badge는 오른쪽에 붙는 작은 표시(DoRms, PIN)입니다.",
   "groups": [
@@ -496,6 +632,30 @@
       ]
     }
   ],
+  "speaking": {
+    "brand": "도치의 교실 설계실",
+    "title": "연수·강의",
+    "lead": "따뜻하게 보고, 치밀하게 설계합니다.",
+    "description": "막막함 → 이해 → 구조 → 첫 행동. 듣고 나면 내일 해볼 일이 하나 생기도록 설계합니다.",
+    "topics": [
+      "진학지도",
+      "생기부",
+      "첫 고3 담임",
+      "학급운영·관계 설계",
+      "AI·바이브코딩"
+    ],
+    "cta": {
+      "label": "연수·강의 문의",
+      "href": "mailto:jasmint912@gmail.com?subject=%EC%97%B0%EC%88%98%C2%B7%EA%B0%95%EC%9D%98%20%EB%AC%B8%EC%9D%98"
+    },
+    "historyGroup": "lecture"
+  },
+  "credibility": {
+    "eyebrow": "BOOKS",
+    "title": "저서·집필",
+    "lead": "2014년부터 국어 교재와 학습 콘텐츠를 써 왔습니다.",
+    "sourceGroup": "writing"
+  },
   "footer": {
     "line": "보드라운고슴도치의 아늑한 숲에 오신 것을 환영합니다.",
     "credit": "made by 도치쌤"
