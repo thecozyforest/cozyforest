@@ -5,7 +5,7 @@
     "alternateName": "도치쌤",
     "tagline": "가르치고, 만들고, 기록합니다",
     "seoTitle": "기경민(도치쌤) | 고등학교 국어교사 · 진학지도 · AI 교육도구",
-    "description": "고등학교 국어교사 기경민(도치쌤)의 작업실. 학교 현장의 막막한 문제를 말과 구조로 풀어냅니다. 생기부 분석기·수시 입결 뷰어·방배치 마법사 같은 교사용 웹도구와 진학지도·학급운영·AI 바이브코딩 연수 자료를 한자리에 모았습니다.",
+    "description": "고등학교 국어교사 기경민(도치쌤)의 작업실. 학교 현장의 막막한 문제를 말과 구조로 풀어냅니다. 생기부 분석기·수시 입결 뷰어·방배치 마법사·고전소설 학습 게임 같은 교사용 웹도구와 진학지도·학급운영·AI 바이브코딩 연수 자료를 한자리에 모았습니다.",
     "keywords": [
       "기경민",
       "도치쌤",
@@ -186,6 +186,25 @@
         },
         {
           "year": "2026",
+          "name": "방배정 마법사 60분 연수",
+          "description": "담임톡 · 9.27 · 발표자료 공유판",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/room_wizard_slides/",
+          "icon": "manual"
+        },
+        {
+          "year": "2026",
+          "name": "생기부를 면접 질문으로 바꾸는 40분",
+          "description": "교육티타임 유튜브 LIVE · 9.16 · 다시 보기",
+          "href": "https://www.youtube.com/watch?v=K49Wd77y8IU",
+          "icon": "manual"
+        },
+        {
+          "year": "2026",
+          "name": "왕초보 고3담임을 위한 우당탕탕 원서 상담 & 3담의 9월",
+          "description": "담임톡 · 8.29 · 120분"
+        },
+        {
+          "year": "2026",
           "name": "쌉P 고등쌤의 만들어볼까요",
           "description": "교실백점 · 7.18 · 왕초보 바이브코딩"
         },
@@ -197,16 +216,16 @@
         {
           "year": "2026",
           "name": "방배정 마법사 2회차",
-          "description": "관계를 설계하는 따뜻한 방배정 · 5.10"
+          "description": "교실백점 · 관계를 설계하는 따뜻한 방배정 · 5.10"
         },
         {
           "year": "2026",
           "name": "방배정 마법사",
-          "description": "관계를 설계하는 따뜻한 방배정 · 4.30"
+          "description": "담임톡 · 관계를 설계하는 따뜻한 방배정 · 4.30"
         },
         {
           "year": "2026",
-          "name": "쌉P 여고 담임의 흑막으로 완성하는 학급운영",
+          "name": "쌉P 여고 담임의 흑막으로 세팅하는 학급 운영",
           "description": "교실백점 · 3.2"
         },
         {
@@ -255,6 +274,19 @@
           "description": "누르면 내 구글 드라이브에 설문 폼이 복제됩니다",
           "href": "https://docs.google.com/forms/d/1QR2R_80Nm7ZqdHrhwQm3k_YuP_nYmC-662iXmhlnAUc/copy",
           "icon": "download"
+        },
+        {
+          "name": "안내문 만들기 키트",
+          "description": "학생에게 사이트를 안내할 때 QR 코드를 자동으로 넣어 A4 안내문을 만듭니다",
+          "href": "https://dorms.school/apps/490871e5-3399-4f8c-a2f2-2d2bcd37d2bf",
+          "icon": "manual",
+          "badge": "DoRms"
+        },
+        {
+          "name": "QR 코드 자동 생성기",
+          "description": "주소를 넣으면 QR 코드를 만들어 이미지로 저장합니다",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/qr-code-maker/",
+          "icon": "code"
         },
         {
           "name": "엄지척!",
@@ -316,6 +348,12 @@
       "icon": "school",
       "items": [
         {
+          "name": "2028 대입 5등급제 강의 정리",
+          "description": "서울중등진학지도연구회 하반기 세미나(9.30) · 윤희태 선생님 강의와 서울과기대 발표를 강연자 동의를 받아 정리",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/2026-09-jinhak-seminar/",
+          "icon": "magazine"
+        },
+        {
           "name": "생기부 분석기 Pro",
           "description": "세특·행특 분석 · 실행 링크는 교사 인증 진학방에서 배포",
           "href": "https://dorms.school/apps/85d1481d-3e11-47f9-ac10-b9251c730b35",
@@ -344,11 +382,24 @@
           "badge": "DoRms"
         },
         {
-          "name": "학생 선택과목 상담기",
-          "description": "학교 편제표를 반영한 선택과목 상담 도구",
-          "href": "https://dorms.school/apps/cc3cc7ab-82d0-4b26-8842-3a6b8dc0d792",
+          "name": "정시 입결 뷰어",
+          "description": "대학 어디가·대교협 2021~2026 정시 입결을 한 화면에서 비교합니다",
+          "href": "https://dorms.school/apps/bfe0f887-994e-4e5e-b63e-c6aad86d1d0a",
+          "icon": "docs",
+          "badge": "DoRms"
+        },
+        {
+          "name": "모두의 선택과목 상담기",
+          "description": "학생의 기록·관심과 우리 학교 편제표를 함께 보며 과목 선택을 상담합니다 · 생기부 없는 고1도 사용",
+          "href": "https://dorms.school/apps/32285302-7afb-4861-a472-f9ff95068a0c",
           "icon": "school",
           "badge": "DoRms"
+        },
+        {
+          "name": "모두의 선택과목 상담기 — 사용 설명서",
+          "description": "화면을 따라가며 상담 흐름을 보여 주는 공개 설명서",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/course-counselor-guide/",
+          "icon": "manual"
         },
         {
           "name": "생기부 기반 면접 질문 생성기",
@@ -371,9 +422,22 @@
           "icon": "manual"
         },
         {
+          "name": "생기부를 면접 질문으로 — 방송 교안",
+          "description": "교육티타임 40분 방송에서 쓴 교안 공유판",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/teatime-interview-deck/",
+          "icon": "manual"
+        },
+        {
           "name": "수시지원 상담카드 수합앱",
           "description": "학생 상담카드를 실시간으로 수합하고 변경합니다",
           "href": "https://dorms.school/apps/d851406e-d292-434c-bb25-7109922541d1",
+          "icon": "docs",
+          "badge": "DoRms"
+        },
+        {
+          "name": "수시지원 상담카드 수합앱 — 전문대 포함판",
+          "description": "4년제에 전문대 상담카드까지 함께 수합합니다",
+          "href": "https://dorms.school/apps/02b39569-a622-40d5-9d58-3b51353a32e3",
           "icon": "docs",
           "badge": "DoRms"
         },
@@ -406,10 +470,17 @@
           "badge": "DoRms"
         },
         {
-          "name": "2027 수시지원 상담카드 V9.4",
-          "description": "연세대·서강대 논술 입결까지 연결한 보강본",
-          "href": "https://dorms.school/resources/p/e6ffcfcc-addb-4668-b761-937303b28420",
+          "name": "2027 수시지원 상담카드 V9.8",
+          "description": "전형일정 달력까지 들어간 최신판",
+          "href": "https://dorms.school/apps/265e3fad-09a9-4cfc-8880-13b0e3856616",
           "icon": "download",
+          "badge": "DoRms"
+        },
+        {
+          "name": "도치쌤의 9월 원서상담 루틴",
+          "description": "입결을 읽는 열네 가지 질문부터 수시 6장 배치까지 · 고3 담임 실무 자료",
+          "href": "https://dorms.school/apps/ed107e08-6ebe-4d6a-a594-242866a20bfb",
+          "icon": "manual",
           "badge": "DoRms"
         },
         {
@@ -494,6 +565,24 @@
       "icon": "magazine",
       "items": [
         {
+          "name": "책장 밖의 딸들",
+          "description": "계모형 가정소설을 다시 엮는 이야기 게임 · 고등 국어 2차시 · 휴대폰으로",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/daughters-beyond-pages/",
+          "icon": "game"
+        },
+        {
+          "name": "구운몽: 인간 재미 어떠하더냐",
+          "description": "성진이 되어 연화봉을 걷고 양소유로 한평생을 산 뒤 깨어나며 환몽 구조를 익히는 학습 게임",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/guunmong-8pearls/",
+          "icon": "game"
+        },
+        {
+          "name": "용궁탈출, 간을 지켜라",
+          "description": "『토끼전』 인물이 되어 상대의 속내를 읽고 말을 골라 용궁을 빠져나오는 대화 전략 게임",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/tokkijeon-escape/",
+          "icon": "game"
+        },
+        {
           "name": "말랑문법연구소",
           "description": "품사와 문장성분을 눈에 보이게 · 화법과 언어 수업 전에",
           "href": "https://thecozyforest.github.io/population/korean-grammar-lab/",
@@ -504,6 +593,13 @@
           "description": "수능 국어 오답을 유형별로 자동 분류 · 2027·2028 전용",
           "href": "https://thecozyforest.github.io/dochis-warehouse/Korean_Error_Pattern_Tracker/",
           "icon": "docs"
+        },
+        {
+          "name": "분모자 — 함께 분석하는 모의고사 자료실",
+          "description": "선생님들이 모의고사 문항을 함께 분석해 나누는 무료 자료실 · 4인 공동 제작",
+          "href": "https://dorms.school/apps/7e8a7ac7-feb2-4d6c-b0bf-6669868ce984",
+          "icon": "docs",
+          "badge": "DoRms"
         },
         {
           "name": "고전소설 인터랙티브 웹앱",
@@ -576,6 +672,12 @@
           "icon": "magazine"
         },
         {
+          "name": "도치T의 진학 노트",
+          "description": "블로그 연재 · 2026.10~ · 면접 답변·꼬리질문·지원 동기를 한 편씩 · 1편부터 읽기",
+          "href": "https://blog.naver.com/thecozyforest912/224442849186",
+          "icon": "naver-blog"
+        },
+        {
           "name": "보드라운고슴도치의 아늑한 숲",
           "description": "블로그에 남기는 기록",
           "href": "https://blog.naver.com/thecozyforest912",
@@ -640,6 +742,7 @@
     "topics": [
       "진학지도",
       "생기부",
+      "대입 면접",
       "첫 고3 담임",
       "학급운영·관계 설계",
       "AI·바이브코딩"
