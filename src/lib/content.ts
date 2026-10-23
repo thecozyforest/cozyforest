@@ -27,10 +27,15 @@ export type Group = {
   items: LinkItem[];
 };
 
-/** 숫자는 직접 적지 않고 site.json에서 세거나 계산합니다. */
+/**
+ * 숫자는 되도록 site.json에서 세거나 계산합니다.
+ * `datedOnly`는 연도가 붙은 항목만 셉니다(연수 기록에서 출발 프롬프트 틀 같은 자료를 빼려고).
+ * 밖에서 확인한 수치(도름스 순위 등)만 `value`로 직접 적고, `note`에 기준일을 꼭 답니다.
+ */
 export type Stat =
-  | { countOf: string; label: string; unit?: string }
-  | { sinceYear: number; label: string; unit?: string };
+  | { countOf: string; datedOnly?: boolean; label: string; unit?: string; note?: string }
+  | { sinceYear: number; label: string; unit?: string; note?: string }
+  | { value: string; label: string; note: string };
 
 export type SiteContent = {
   meta: {
@@ -130,8 +135,23 @@ export const bookItems: LinkItem[] =
 export const lectureHistory: LinkItem[] =
   groupById(site.speaking.historyGroup)?.items.filter((item) => !!item.year) ?? [];
 
+/** 연수 기록 설명의 첫 칸(" · " 앞)을 강의한 곳으로 보고 많은 순으로 셉니다. */
+export const lectureHosts: { name: string; count: number }[] = Object.entries(
+  lectureHistory.reduce<Record<string, number>>((acc, item) => {
+    const host = item.description?.split(" · ")[0]?.trim();
+    if (host) acc[host] = (acc[host] ?? 0) + 1;
+    return acc;
+  }, {}),
+)
+  .map(([name, count]) => ({ name, count }))
+  .sort((a, b) => b.count - a.count);
+
 export const statValue = (stat: Stat) => {
+  if ("value" in stat) return stat.value;
   const unit = stat.unit ?? "";
-  if ("countOf" in stat) return `${groupById(stat.countOf)?.items.length ?? 0}${unit}`;
+  if ("countOf" in stat) {
+    const items = groupById(stat.countOf)?.items ?? [];
+    return `${(stat.datedOnly ? items.filter((item) => !!item.year) : items).length}${unit}`;
+  }
   return `${new Date().getFullYear() - stat.sinceYear}${unit}`;
 };

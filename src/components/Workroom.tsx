@@ -9,6 +9,7 @@ import {
   featuredItems,
   bookItems,
   lectureHistory,
+  lectureHosts,
   statValue,
   type Group,
   type LinkItem
@@ -108,7 +109,10 @@ function IntroCard() {
           {intro.stats.map((stat) => (
             <div key={stat.label}>
               <dt>{statValue(stat)}</dt>
-              <dd>{stat.label}</dd>
+              <dd>
+                {stat.label}
+                {stat.note ? <small>{stat.note}</small> : null}
+              </dd>
             </div>
           ))}
         </dl>
@@ -436,6 +440,20 @@ function Speaking({ onOpen }: { onOpen: (groupId: string) => void }) {
         <h3>{speaking.title}</h3>
         <p className="cf-speaking-lead">{speaking.lead}</p>
         <p className="cf-speaking-body">{speaking.description}</p>
+
+        {lectureHosts.length > 0 ? (
+          <>
+            <span className="cf-speaking-label">강의한 곳</span>
+            <ul className="cf-hosts">
+              {lectureHosts.map((host) => (
+                <li key={host.name}>
+                  {host.name}
+                  {host.count > 1 ? <b>{host.count}회</b> : null}
+                </li>
+              ))}
+            </ul>
+          </>
+        ) : null}
 
         <span className="cf-speaking-label">강의 가능한 주제</span>
         <div className="cf-topics">

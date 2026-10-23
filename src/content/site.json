@@ -5,20 +5,23 @@
     "alternateName": "도치쌤",
     "tagline": "가르치고, 만들고, 기록합니다",
     "seoTitle": "기경민(도치쌤) | 고등학교 국어교사 · 진학지도 · AI 교육도구",
-    "description": "고등학교 국어교사 기경민(도치쌤)의 작업실. 학교 현장의 막막한 문제를 말과 구조로 풀어냅니다. 생기부 분석기·수시 입결 뷰어·방배치 마법사·고전소설 학습 게임 같은 교사용 웹도구와 진학지도·학급운영·AI 바이브코딩 연수 자료를 한자리에 모았습니다.",
+    "description": "고등학교 국어교사 기경민(도치쌤)의 작업실. 학교 현장의 막막한 문제를 말과 구조로 풀어냅니다. 생기부 분석기·면접 준비기·방배치 마법사·고전소설 학습 게임 같은 교사용 웹도구와 진학지도·학급운영·대입 면접·AI 바이브코딩 연수 자료, 블로그 연재 「도치T의 진학 노트」를 한자리에 모았습니다.",
     "keywords": [
       "기경민",
       "도치쌤",
+      "도치T",
       "고등학교 국어교사",
       "진학지도",
+      "대입 면접",
       "생활기록부",
       "학급운영",
       "교사용 웹도구",
+      "교사 연수 강사",
       "바이브코딩 연수",
-      "AI 교육도구"
+      "AI 교육도구",
+      "도름스"
     ],
     "sameAs": [
-      "https://instagram.com/usermaria912",
       "https://instagram.com/thecozyforest",
       "https://blog.naver.com/thecozyforest912",
       "https://github.com/thecozyforest"
@@ -60,12 +63,17 @@
   },
   "intro": {
     "eyebrow": "ABOUT",
-    "headline": "국어교사 → 교재 저자 → 진학지도 → 교육도구 제작 → AI·바이브코딩 연수",
+    "headline": "국어교사 → 교재 저자 → 진학지도 → 교육도구 제작 → 교사 연수 강사",
     "lines": [
       "학교 현장에서 생기는 막막한 문제를 말과 구조로 풀어냅니다.",
       "필요한 도구는 직접 만들어 교실에서 써 보고, 그 과정을 연수로 나눕니다."
     ],
     "stats": [
+      {
+        "value": "1위",
+        "label": "도름스 전체 도름 랭킹",
+        "note": "4,217도름 · 2026.10.23 기준"
+      },
       {
         "sinceYear": 2014,
         "unit": "년+",
@@ -81,7 +89,14 @@
       },
       {
         "countOf": "lecture",
-        "label": "연수·강의 기록"
+        "datedOnly": true,
+        "unit": "회",
+        "label": "교사 연수·강의"
+      },
+      {
+        "value": "4.6만+",
+        "label": "도름스 앱·자료 누적 조회",
+        "note": "앱 38 · 자료 27 · 2026.10.23 기준"
       }
     ],
     "timeline": [
@@ -102,13 +117,13 @@
       },
       {
         "year": "2025",
-        "title": "교사 연수 시작",
+        "title": "교실백점 연수 강사 시작",
         "description": "진학지도 · 첫 고3 담임 · 학급운영"
       },
       {
         "year": "2026",
-        "title": "교사용 웹도구 배포와 바이브코딩 연수",
-        "description": "창비교육 《고등학교 독서와 작문 자습서》 공저"
+        "title": "교사용 웹도구 배포 · 연수 강사 · 진학 칼럼 연재",
+        "description": "창비교육 《고등학교 독서와 작문 자습서》 공저 · 교육티타임 유튜브 LIVE 출연 · 블로그 「도치T의 진학 노트」"
       }
     ]
   },
@@ -136,13 +151,8 @@
   "featured": {
     "eyebrow": "SELECTED WORK",
     "title": "대표 작업",
-    "description": "여섯 개만 골랐습니다. 나머지는 아래 작업실에 분류해 두었습니다.",
+    "description": "진학 도구부터 국어 수업·방송까지, 여섯 개만 골랐습니다. 나머지는 아래 작업실에 분류해 두었습니다.",
     "items": [
-      {
-        "group": "admission",
-        "name": "생기부 분석기 Pro",
-        "why": "세특·행특을 학생마다 다시 읽고 다시 쓰는 일이 버거워서 만들었습니다."
-      },
       {
         "group": "admission",
         "name": "모두의 면접 준비기 Pro",
@@ -150,13 +160,13 @@
       },
       {
         "group": "admission",
-        "name": "수시 입결 뷰어",
-        "why": "상담할 때마다 어디가를 새로 뒤지지 않도록 2023~2026 입결을 한 화면에 모았습니다."
+        "name": "생기부 분석기 Pro",
+        "why": "세특·행특을 학생마다 다시 읽고 다시 쓰는 일이 버거워서 만들었습니다."
       },
       {
         "group": "admission",
-        "name": "2027 수능최저 조회기",
-        "why": "성적표를 올리면 교과·학종 707개와 논술 40개 전형의 최저 충족을 자동으로 계산합니다."
+        "name": "수시지원 상담카드 수합앱",
+        "why": "원서철 학생 상담카드를 실시간으로 모으고, 상담하고, 바꿉니다. 제 도구 가운데 선생님들이 도름을 가장 많이 눌러 주셨습니다."
       },
       {
         "group": "classroom",
@@ -164,9 +174,14 @@
         "why": "수학여행 방배정에서 해마다 나던 갈등을, 감이 아니라 기준과 절차로 바꿨습니다."
       },
       {
+        "group": "class",
+        "name": "책장 밖의 딸들",
+        "why": "계모형 가정소설의 본문은 그대로 읽히되, 그 안의 편견을 학생이 스스로 알아채고 넘어서도록 짠 국어 수업 게임입니다."
+      },
+      {
         "group": "lecture",
-        "name": "출발 프롬프트 틀",
-        "why": "코딩은 나와 무관하다고 느끼던 선생님이 첫 앱을 만들 때 붙잡는 출발점입니다."
+        "name": "생기부를 면접 질문으로 바꾸는 40분",
+        "why": "생기부 한 줄이 면접 질문이 되는 과정을 교육티타임 유튜브 LIVE에서 40분 동안 풀었습니다. 다시 보기로 볼 수 있습니다."
       }
     ]
   },
@@ -673,12 +688,12 @@
         },
         {
           "name": "도치T의 진학 노트",
-          "description": "블로그 연재 · 2026.10~ · 면접 답변·꼬리질문·지원 동기를 한 편씩 · 1편부터 읽기",
+          "description": "블로그 연재 · 2026.10~ · 꼬리질문·지원 동기·진로 변경·면접 피드백까지 학생·학부모·담임을 위한 면접 편 연재 중 · 1편부터 읽기",
           "href": "https://blog.naver.com/thecozyforest912/224442849186",
           "icon": "naver-blog"
         },
         {
-          "name": "보드라운고슴도치의 아늑한 숲",
+          "name": "보드라운고슴도치의 숲",
           "description": "블로그에 남기는 기록",
           "href": "https://blog.naver.com/thecozyforest912",
           "icon": "naver-blog"
@@ -714,22 +729,16 @@
           "copy": "jasmint912@gmail.com"
         },
         {
-          "name": "보드라운고슴도치의 아늑한 숲",
+          "name": "@thecozyforest",
+          "description": "도치T 인스타그램 · 교사용 도구와 진학 이야기",
+          "href": "https://instagram.com/thecozyforest",
+          "icon": "instagram"
+        },
+        {
+          "name": "보드라운고슴도치의 숲",
           "description": "네이버 블로그",
           "href": "https://blog.naver.com/thecozyforest912",
           "icon": "naver-blog"
-        },
-        {
-          "name": "@usermaria912",
-          "description": "인스타그램",
-          "href": "https://instagram.com/usermaria912",
-          "icon": "instagram"
-        },
-        {
-          "name": "@thecozyforest",
-          "description": "새 인스타그램 · 준비 중",
-          "href": "https://instagram.com/thecozyforest",
-          "icon": "instagram"
         }
       ]
     }

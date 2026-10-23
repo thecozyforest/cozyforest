@@ -801,6 +801,14 @@ nextjs-portal,
   color: var(--cocoa);
 }
 
+.cf-stats dd small {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--clay);
+}
+
 .cf-timeline {
   margin: 0;
   padding: 1.1rem 1.2rem 1.1rem;
@@ -1174,6 +1182,32 @@ nextjs-portal,
   font-weight: 800;
   letter-spacing: 0.18em;
   opacity: 0.6;
+}
+
+.cf-hosts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.55rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cf-hosts li {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  padding: 0.34rem 0.75rem;
+  border-radius: 999px;
+  background: var(--cream);
+  color: var(--bark);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.cf-hosts b {
+  color: var(--berry);
+  font-weight: 800;
 }
 
 .cf-topics {
