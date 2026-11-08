@@ -72,7 +72,7 @@
       {
         "value": "1위",
         "label": "도름스 전체 도름 랭킹",
-        "note": "4,217도름 · 2026.10.23 기준"
+        "note": "4,799도름 · 2026.11.09 기준"
       },
       {
         "sinceYear": 2014,
@@ -94,9 +94,9 @@
         "label": "교사 연수·강의"
       },
       {
-        "value": "4.6만+",
+        "value": "5만+",
         "label": "도름스 앱·자료 누적 조회",
-        "note": "앱 38 · 자료 27 · 2026.10.23 기준"
+        "note": "앱 41 · 자료 34 · 2026.11.09 기준"
       }
     ],
     "timeline": [
@@ -373,6 +373,18 @@
       "icon": "school",
       "items": [
         {
+          "name": "2028 입시 열린 길",
+          "description": "약한 과목·학기·수능 영역의 영향을 줄여 주는 장치를 2028 전형별로 모은 상담 자료 · 시행계획 원문 대조",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/2028-open-guide/",
+          "icon": "magazine"
+        },
+        {
+          "name": "2028 교과전형 상위 N과목",
+          "description": "상위 몇 과목만 반영하는 대학을 전국 단위로 정리 · 「열린 길」의 교과전형 상세판",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/2028-open-guide/gyogwa-top-n.html",
+          "icon": "magazine"
+        },
+        {
           "name": "2028 대입 5등급제 강의 정리",
           "description": "서울중등진학지도연구회 하반기 세미나(9.30) · 윤희태 선생님 강의와 서울과기대 발표를 강연자 동의를 받아 정리",
           "href": "https://thecozyforest.github.io/dochis-warehouse/2026-09-jinhak-seminar/",
@@ -608,6 +620,18 @@
           "icon": "game"
         },
         {
+          "name": "고전시가 — 읽기의 구조",
+          "description": "낯선 작품 앞에서도 근거부터 짚어 읽는 고전시가 도구 · 작품 읽기·견주어 읽기·읽기 기록",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/korean-reading-20261106/classical-poetry/",
+          "icon": "docs"
+        },
+        {
+          "name": "도치의 비문학 — 흐름과 위치",
+          "description": "교사가 지문을 넣어 쓰는 비문학 읽기 도구 · 지문과 기록을 외부로 보내지 않습니다",
+          "href": "https://thecozyforest.github.io/dochis-warehouse/korean-reading-20261106/nonfiction/",
+          "icon": "docs"
+        },
+        {
           "name": "말랑문법연구소",
           "description": "품사와 문장성분을 눈에 보이게 · 화법과 언어 수업 전에",
           "href": "https://thecozyforest.github.io/population/korean-grammar-lab/",
@@ -678,6 +702,13 @@
           "description": "2027학년도 수능을 앞둔 고3을 위한 응원 메타버스 · 15공간 · 기원·쉼·격려",
           "href": "https://dongduk-cheer-2026.web.app/",
           "icon": "game"
+        },
+        {
+          "name": "수능 응원 공간 — 학교 템플릿",
+          "description": "학교 이름과 수능일만 고치면 우리 학교 공간이 되는 공개 소스 · 15공간 그대로",
+          "href": "https://github.com/thecozyforest/suneung-cheer-space",
+          "icon": "code",
+          "badge": "GitHub"
         }
       ]
     },
